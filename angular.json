@@ -30,7 +30,7 @@
               }
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "jaraba-portfolio/src/styles/styles.scss"
             ]
           },
           "configurations": {
