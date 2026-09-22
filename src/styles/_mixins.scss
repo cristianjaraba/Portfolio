@@ -10,8 +10,8 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
-  position: absolute;
   transition: background-color 0.2s ease, color 0.2s ease;
+  overflow: hidden;
 
   &:hover{
     color: vars.$primary-green;

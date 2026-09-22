@@ -9,8 +9,9 @@ import { Language } from '../../core/interfaces/language';
 })
 export class Header {
   languages: Language[] = [
+    { code: 'de', label: 'DE' },
     { code: 'en', label: 'EN' },
-    { code: 'de', label: 'DE' }
+    { code: 'es', label: 'ES' }
   ];
   activeLang: string = 'de';
   navItems = [

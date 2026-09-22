@@ -55,31 +55,20 @@ li {
 }
 
 .lang-btn-container {
-    width: 90px;
+    width: fit-content;
     height: 30px;
     border: 1px solid vars.$primary-green;
     border-radius: 20px;
     display: flex;
-    position: relative;
 
     &:hover {
-        border: 1px solid white;
+        border-color: white;
     }
 }
 
 .lang-btn {
     @include mix.lang-btn-base;
-    position: absolute;
-    top: -1px;
-    bottom: 0;
-}
-
-.lang-btn:first-child {
-    left: -2px;
-}
-
-.lang-btn:last-child {
-    right: -2px;
+    flex: 1;
 }
 
 .lang-btn--activated:hover~.lang-btn,
