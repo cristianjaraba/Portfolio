@@ -1,0 +1,36 @@
+@use './variables' as vars;
+
+@mixin lang-btn-base {
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  color: #3DCFB680;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover{
+    color: vars.$primary-green;
+  }
+
+  &.lang-btn--activated {
+    background-color: vars.$primary-green;
+    color: white;
+    font-weight: 700;
+    cursor: auto;
+  }
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}

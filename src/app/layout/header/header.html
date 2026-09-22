@@ -1,0 +1,32 @@
+<header>
+    <div class="header-left-container">
+        <div class="lang-btn-container">
+            @for (lang of languages; track lang.code) {
+            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang"
+                [disabled]="lang.code === activeLang" (click)="setLanguage(lang.code)">
+                {{ lang.label }}
+            </button>
+            }
+        </div>
+
+        <nav>
+            <ul>
+                @for (item of navItems; track item.label) {
+                <li>
+                    <a [href]="item.href"><span class="point"></span>{{ item.label }}</a>
+                </li>
+                }
+            </ul>
+        </nav>
+    </div>
+    <div class="personal-logo-container">
+        <div class="initials-container">
+            <span class="c">C</span>
+            <span class="j">J</span>
+        </div>
+        <div class="name-container">
+            <span>Cristian</span>
+            <span>Jaraba</span>
+        </div>
+    </div>
+</header>
