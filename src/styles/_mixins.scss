@@ -1,36 +1,44 @@
 @use './variables' as vars;
 
-@mixin lang-btn-base {
-  width: 50px;
-  height: 30px;
-  border-radius: 20px;
-  border: none;
-  background-color: transparent;
-  color: #3DCFB680;
-  font-size: 16px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  overflow: hidden;
+// ==========================================================================
+// Flex helpers
+// ==========================================================================
 
-  &:hover{
-    color: vars.$primary-green;
-  }
-
-  &.lang-btn--activated {
-    background-color: vars.$primary-green;
-    color: white;
-    font-weight: 700;
-    cursor: auto;
-  }
-}
-
-@mixin flex-center{
+@mixin flex-center {
     display: flex;
     align-items: center;
 }
 
-@mixin flex-column{
+@mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+
+// ==========================================================================
+// Language button
+// ==========================================================================
+
+@mixin lang-btn-base {
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    color: #3DCFB680;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Fira Code';
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        color: vars.$primary-green;
+    }
+
+    &.lang-btn--activated {
+        background-color: vars.$primary-green;
+        color: white;
+        font-weight: 700;
+        cursor: auto;
+    }
 }
