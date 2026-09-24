@@ -42,3 +42,92 @@
         cursor: auto;
     }
 }
+
+// ==========================================================================
+// Navigation Links
+// ==========================================================================
+
+
+@mixin navigation-links($inset, $point_size, $axis: x) {
+    a {
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        transition: color 0.2s ease-in-out;
+        color: white;
+
+        &:active {
+            color: vars.$primary-green;
+        }
+    }
+
+    .point {
+        height: $point_size;
+        width: $point_size;
+        background-color: vars.$primary-green;
+        border-radius: 50px;
+        position: absolute;
+        inset: $inset;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+
+        @if $axis ==x {
+            transform: translateX(-50%);
+        }
+
+        @else if $axis ==y {
+            margin: auto;
+            margin-right: 5px;
+        }
+    }
+
+    a:hover>.point {
+        opacity: 1;
+    }
+}
+
+// ==========================================================================
+// Personal Logo
+// ==========================================================================
+
+@mixin personal-logo($font-size: clamp(1.75rem, 2.8vw, 2.75rem)) {
+    @include flex-center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Karla';
+    font-size: $font-size;
+
+    &__initials {
+        color: vars.$primary-green;
+        @include flex-column;
+        position: relative;
+    }
+
+    &__name {
+        color: white;
+        @include flex-column;
+    }
+
+    &__initials span,
+    &__name span {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        line-height: 0.8;
+        -webkit-text-stroke: 1px vars.$primary-green; 
+        transition: -webkit-text-fill-color 0.3s ease;
+    }
+
+    &__name span {
+        -webkit-text-stroke-color: white; 
+    }
+
+    &:hover {
+
+        .personal-logo__initials span,
+        .personal-logo__name span {
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

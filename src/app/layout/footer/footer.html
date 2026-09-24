@@ -1,0 +1,29 @@
+<footer class="footer">
+    <div class="footer__brand">
+        <div class="personal-logo">
+            <div class="personal-logo__initials">
+                <span class="personal-logo__letter personal-logo__letter--c">C</span>
+                <span class="personal-logo__letter personal-logo__letter--j">J</span>
+            </div>
+            <div class="personal-logo__name">
+                <span>Cristian</span>
+                <span>Jaraba</span>
+            </div>
+        </div>
+        <div class="footer__info">
+            <span>Full Stack Web Developer</span>
+            <span>Berlin Germany</span>
+        </div>
+    </div>
+    <div class="footer__copy-right">© Cristian Jaraba 2026</div>
+
+    <nav class="footer__nav-items-container">
+        <ul>
+            @for (item of navItems; track item.label) {
+            <li>
+                <a [href]="item.href"><span class="point"></span>{{ item.label }}</a>
+            </li>
+            }
+        </ul>
+    </nav>
+</footer>
