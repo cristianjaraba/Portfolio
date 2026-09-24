@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="footer__info">
-            <span>Full Stack Web Developer</span>
+            <span>Full Stack Developer</span>
             <span>Berlin Germany</span>
         </div>
     </div>
@@ -21,9 +21,11 @@
         <ul>
             @for (item of navItems; track item.label) {
             <li>
-                <a [href]="item.href"><span class="point"></span>{{ item.label }}</a>
+                <a [href]="item.href" target="_blank"><span class="point"></span>{{ item.label }}</a>
             </li>
             }
         </ul>
     </nav>
+
+    <div class="footer__copy-right--mobile-version">© Cristian Jaraba 2026</div>
 </footer>

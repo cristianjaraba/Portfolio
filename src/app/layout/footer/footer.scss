@@ -14,7 +14,7 @@
     }
 
     .personal-logo {
-        @include mix.personal-logo(1.2rem);
+        @include mix.personal-logo(clamp(1.4rem, 2vw, 1.75rem));
     }
 
     &__info {
@@ -29,6 +29,12 @@
         color: vars.$primary-green;
         font-family: 'Fira Code';
         font-size: 18px;
+
+        &--mobile-version {
+            color: vars.$primary-green;
+            font-family: 'Fira Code';
+            font-size: 18px;
+        }
     }
 
     &__nav-items-container {
@@ -37,10 +43,103 @@
     }
 }
 
+footer {
+    @include mix.section-padding;
+}
+
 // ==========================================================================
 // Responsive Design
 // ==========================================================================
 
-footer{
-   @include mix.section-padding;
+// 0 - 480px
+@media (max-width: 480px) {
+    .footer {
+        flex-wrap: wrap;
+
+        &__copy-right {
+            display: none;
+
+            &--mobile-version {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: center;
+                padding-top: 20px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+        }
+
+    }
+}
+
+// 481 - 768px
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        flex-wrap: wrap;
+
+        &__info {
+            font-size: 18px;
+        }
+
+        &__copy-right {
+            display: none;
+
+            &--mobile-version {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: center;
+                padding-top: 20px;
+                font-size: 20px;
+            }
+        }
+
+        a {
+            font-size: 18px;
+        }
+
+    }
+}
+
+// 769 - 1279px
+@media (min-width: 769px) {
+    .footer {
+
+
+        &__info {
+            font-size: 18px;
+        }
+
+        &__copy-right {
+
+            font-size: 20px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+    .footer__copy-right {
+        display: flex;
+
+        &--mobile-version {
+            display: none;
+        }
+    }
+}
+
+// + 1280px
+@media (min-width: 1280px) {
+    .footer__copy-right {
+        display: flex;
+
+        &--mobile-version {
+            display: none;
+        }
+    }
 }
