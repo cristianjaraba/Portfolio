@@ -38,18 +38,18 @@
     }
 
     &__nav-items-container {
-        @include mix.navigation-links(0 100% 0 0, 5px, y);
+        @include mix.navigation-links(0 100% 0 0, 5px, y, vars.$primary-green);
         font-family: 'Karla';
     }
-}
-
-footer {
-    @include mix.section-padding;
 }
 
 // ==========================================================================
 // Responsive Design
 // ==========================================================================
+
+footer {
+    @include mix.section-padding;
+}
 
 // 0 - 480px
 @media (max-width: 480px) {
