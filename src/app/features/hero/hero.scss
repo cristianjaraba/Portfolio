@@ -1,0 +1,306 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mix;
+
+
+// ========================================
+// Animations
+// ========================================
+
+@keyframes animateArrow {
+
+    0%,
+    100% {
+        transform: translateY(-4px);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes marquee-content {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateX(-150%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    51% {
+        transform: translateX(150%);
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+// ========================================
+// Hero
+// ========================================
+
+.hero {
+    flex: 1;
+
+    @include mix.content-limit;
+    @include mix.flex-column;
+
+    justify-content: end;
+
+
+    // ========================================
+    // Central content
+    // ========================================
+
+    &__central-container {
+        align-self: center;
+
+        @include mix.flex-column;
+
+        align-items: center;
+
+        position: absolute;
+        inset: 0;
+
+        margin: 0;
+
+        h1,
+        span {
+            line-height: 0.8;
+        }
+    }
+
+
+    // ========================================
+    // Title
+    // ========================================
+
+    &__title {
+        color: white;
+
+        font-family: 'Karla';
+        font-size: 128px;
+
+        margin-bottom: 2rem;
+    }
+
+
+    // ========================================
+    // Job title
+    // ========================================
+
+    &__work-title {
+        color: white;
+
+        font-family: 'Fira Code';
+        font-size: 40px;
+    }
+
+
+    // ========================================
+    // Links
+    // ========================================
+
+    &__links-container {
+        @include mix.flex-center;
+
+        margin-top: 4rem;
+
+        gap: 2rem;
+    }
+
+
+    // ========================================
+    // Marquee button
+    // ========================================
+
+    &__marquee {
+        @include mix.remove-link-style(white);
+
+        padding: 15px 20px;
+
+        display: flex;
+        align-items: center;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        border: 1px solid white;
+        border-radius: 30px;
+
+        font-family: 'Karla';
+        font-size: 18px;
+
+        cursor: pointer;
+
+        &--work{
+            width: 170px;
+        }
+
+        &--contact{
+            width: 135px;
+        }
+
+        transition: border 0.2s ease-in-out;
+
+        .hero__marquee-track {
+                transition: color 0.2s ease-in-out;
+                color: white;
+            }
+
+        &:hover {
+
+            border: 1px solid vars.$primary-green;
+
+            .hero__marquee-track {
+                transition: color 0.2s ease-in-out;
+                color: vars.$primary-green;
+                animation: marquee-content 2s linear infinite;
+            }
+        }
+    }
+
+
+    // ========================================
+    // Marquee track
+    // ========================================
+
+    &__marquee-track {
+        display: flex;
+
+        width: max-content;
+
+        flex-shrink: 0;
+    }
+
+
+    // ========================================
+    // Marquee content
+    // ========================================
+
+    &__marquee-content {
+        display: flex;
+
+        flex-shrink: 0;
+
+        gap: 50px;
+
+        padding-right: 50px;
+    }
+
+
+    // ========================================
+    // Side lines container
+    // ========================================
+
+    &__lines-container {
+        @include mix.flex-center;
+
+        justify-content: space-between;
+    }
+
+
+    // ========================================
+    // Side line
+    // ========================================
+
+    &__line {
+        @include mix.flex-column;
+
+        align-items: center;
+
+        gap: 20px;
+
+
+        &--left {
+            align-self: flex-end;
+        }
+
+
+        &--right {
+            justify-content: space-between;
+        }
+    }
+
+
+    // ========================================
+    // Arrow
+    // ========================================
+
+    &__arrow-container {
+        width: 30px;
+        height: 50px;
+
+        border: 1px solid vars.$primary-green;
+        border-radius: 30px;
+
+        @include mix.flex-column;
+
+        justify-content: center;
+        align-items: center;
+
+
+        svg {
+            animation: animateArrow 1.2s ease infinite;
+        }
+    }
+
+
+    // ========================================
+    // Email
+    // ========================================
+
+    &__email {
+        width: 100%;
+
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+
+        @include mix.flex-center;
+        @include mix.remove-link-style(white);
+
+        transition: color 0.2s ease-in-out;
+
+
+        &:hover {
+            color: vars.$primary-green;
+        }
+    }
+
+
+    // ========================================
+    // Social media
+    // ========================================
+
+    &__social-media-container {
+        @include mix.flex-column;
+
+        gap: 5px;
+
+
+        ::ng-deep svg path {
+            transition: fill 0.2s ease-in-out;
+        }
+
+
+        ::ng-deep svg:hover path {
+            fill: white;
+        }
+    }
+}
+

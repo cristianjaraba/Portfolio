@@ -14,8 +14,17 @@
     flex-direction: column;
 }
 
-@mixin section-padding {
-    padding: clamp(10px, 4vh, 40px) max(calc(50% - 720px), 20px);
+@mixin header-footer-padding-top {
+    padding-top: clamp(10px, 4vh, 40px);
+}
+
+@mixin content-limit{
+    padding: 0px max(calc(50% - 720px), 20px);
+}
+
+@mixin remove-link-style($color){
+    text-decoration: none;
+    color: $color;
 }
 
 // ==========================================================================
@@ -141,3 +150,8 @@
         }
     }
 }
+
+// ==========================================================================
+// Marquee
+// ==========================================================================
+

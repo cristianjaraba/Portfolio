@@ -101,7 +101,7 @@ nav{
 dialog {
     height: 250px;
     width: 240px;
-    background: vars.$background-gradient;
+    background: vars.$background-gradient-dialog;
     @include mix.flex-column;
     gap: 25px;
     align-items: center;
@@ -167,5 +167,6 @@ dialog:not([open]) {
 }
 
 header{
-    @include mix.section-padding;
+    @include mix.content-limit;
+    @include mix.header-footer-padding-top;
 }
