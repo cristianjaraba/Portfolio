@@ -10,6 +10,8 @@ header {
     min-height: 100px;
     @include mix.flex-center;
     justify-content: space-between;
+    @include mix.content-limit;
+    @include mix.header-footer-padding-top;
 }
 
 .header-left-container,
@@ -134,6 +136,10 @@ dialog:not([open]) {
   .navigation_menu{
     display: flex;
   }
+  header{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 // 481 - 768px
@@ -166,7 +172,3 @@ dialog:not([open]) {
   }
 }
 
-header{
-    @include mix.content-limit;
-    @include mix.header-footer-padding-top;
-}

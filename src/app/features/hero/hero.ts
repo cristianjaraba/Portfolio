@@ -12,6 +12,7 @@ export class Hero {
 
   socialMediaItems: { label: string; href: string; icon: SafeHtml }[];
   constructor() {
+
     this.socialMediaItems = [
       {
         label: 'GitHub',
@@ -28,6 +29,6 @@ export class Hero {
 </svg>
 `)
       }
-    ]
+    ];
   };
 }

@@ -58,6 +58,8 @@ footer {
 @media (max-width: 480px) {
     .footer {
         flex-wrap: wrap;
+        padding-left: 10px;
+        padding-right: 10px;
 
         &__copy-right {
             display: none;

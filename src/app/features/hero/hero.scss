@@ -48,6 +48,55 @@
     }
 }
 
+@keyframes hero-section-marquee-content {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+// ========================================
+// Hero section
+// ========================================
+
+:host {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__marquee-track {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: #FFFFFF1F;
+        transform: rotate(-3deg);
+        overflow: hidden;
+        @include mix.flex-center;
+        backdrop-filter: blur(1px);
+    }
+
+    &__marquee-content {
+        @include mix.flex-center;
+        flex-shrink: 0;
+        width: max-content;
+        gap: 50px;
+        padding-right: 50px;
+        white-space: nowrap;
+        color: vars.$primary-green;
+        font-family: 'Karla';
+        font-size: 32px;
+        animation: hero-section-marquee-content 10s linear infinite;
+    }
+
+}
+
 
 // ========================================
 // Hero
@@ -55,10 +104,8 @@
 
 .hero {
     flex: 1;
-
     @include mix.content-limit;
     @include mix.flex-column;
-
     justify-content: end;
 
 
@@ -89,13 +136,17 @@
     // Title
     // ========================================
 
+    &__titles-container {
+        @include mix.flex-column;
+        align-items: center;
+    }
+
     &__title {
-        color: white;
-
         font-family: 'Karla';
-        font-size: 128px;
-
+        font-size: clamp(38px, 8vw, 128px);
+        text-align: center;
         margin-bottom: 2rem;
+        color: #D9D9D9;
     }
 
 
@@ -104,10 +155,9 @@
     // ========================================
 
     &__work-title {
-        color: white;
-
         font-family: 'Fira Code';
-        font-size: 40px;
+        font-size: clamp(18px, 3vw, 40px);
+        color: #D9D9D9;
     }
 
 
@@ -135,6 +185,7 @@
 
         display: flex;
         align-items: center;
+        justify-content: center;
 
         overflow: hidden;
 
@@ -148,20 +199,20 @@
 
         cursor: pointer;
 
-        &--work{
+        &--work {
             width: 170px;
         }
 
-        &--contact{
+        &--contact {
             width: 135px;
         }
 
         transition: border 0.2s ease-in-out;
 
         .hero__marquee-track {
-                transition: color 0.2s ease-in-out;
-                color: white;
-            }
+            transition: color 0.2s ease-in-out;
+            color: white;
+        }
 
         &:hover {
 
@@ -195,12 +246,11 @@
 
     &__marquee-content {
         display: flex;
-
         flex-shrink: 0;
 
-        gap: 50px;
-
-        padding-right: 50px;
+        span {
+            font-size: clamp(16px, 1vw, 18px);
+        }
     }
 
 
@@ -209,8 +259,7 @@
     // ========================================
 
     &__lines-container {
-        @include mix.flex-center;
-
+        display: flex;
         justify-content: space-between;
     }
 
@@ -235,6 +284,7 @@
         &--right {
             justify-content: space-between;
         }
+
     }
 
 
@@ -267,7 +317,7 @@
 
     &__email {
         width: 100%;
-
+        margin-bottom: -20px;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
 
@@ -290,12 +340,15 @@
     &__social-media-container {
         @include mix.flex-column;
         @include mix.navigation-links(0 0 0 100%, 5px, y, vars.$primary-green);
-        .point{
+        height: 100%;
+        justify-content: end;
+
+        .point {
             margin-right: 0;
             margin-left: 5px;
         }
 
-        gap: 5px;
+        gap: 15px;
 
 
         ::ng-deep svg path {
@@ -306,6 +359,215 @@
         ::ng-deep svg:hover path {
             fill: white;
         }
+
+        span {
+            @include mix.flex-center;
+        }
     }
 }
 
+// ========================================
+// Responsive Design
+// ========================================
+
+// 0 - 480px
+@media (max-width: 480px) {
+    .hero {
+
+        &__titles-container {
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+
+        &__email {
+            display: none;
+
+            &-movile-icon {
+                display: flex;
+
+                path {
+                    fill: vars.$primary-green;
+                }
+
+                &:hover {
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+
+        &__line--right {
+            gap: 15px;
+        }
+
+        &__right-line-icon {
+            width: 1px;
+            height: 150px;
+        }
+
+        &__left-line-icon {
+            width: 1px;
+            height: 190px;
+        }
+
+        &__links-container {
+            margin-top: 0;
+            gap: 1rem;
+        }
+
+        &__marquee {
+            height: fit-content;
+            width: 130px;
+        }
+
+        &__social-media-container {
+
+            ::ng-deep svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        &__arrow-container {
+            width: 20px;
+            height: 40px;
+        }
+    }
+
+    .hero-section {
+
+        &__marquee-track {
+            bottom: 10px;
+            height: 50px;
+        }
+
+        &__marquee-content {
+            font-size: 24px;
+        }
+
+    }
+}
+
+// 481 - 768px
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero {
+
+        &__titles-container {
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+
+        &__email {
+            display: none;
+
+            &-movile-icon {
+                display: flex;
+
+                path {
+                    transition: fill 0.2s ease-in-out;
+                    fill: vars.$primary-green;
+                }
+
+                &:hover {
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+
+        &__line--right {
+            gap: 15px;
+        }
+
+        &__right-line-icon {
+            width: 1px;
+            height: 180px;
+        }
+
+        &__left-line-icon {
+            width: 1px;
+            height: 210px;
+        }
+
+        &__links-container {
+            margin-top: 0;
+            gap: 1rem;
+        }
+
+        &__marquee {
+            height: fit-content;
+            width: 160px;
+        }
+
+        &__social-media-container {
+
+            ::ng-deep svg {
+                height: 23px;
+                width: 23px;
+            }
+        }
+
+        &__arrow-container {
+            width: 25px;
+            height: 45px;
+        }
+    }
+
+    .hero-section {
+
+        &__marquee-track {
+            bottom: 10px;
+            height: 55px;
+        }
+
+        &__marquee-content {
+            font-size: 30px;
+        }
+
+    }
+}
+
+// 769 - 1279px
+@media (min-width: 769px) and (max-width: 1279px) {
+
+    .hero {
+        &__email-movile-icon {
+            display: none;
+        }
+
+        &__social-media-container {
+
+            justify-content: flex-start;
+            height: fit-content;
+
+        }
+
+        &__right-line-icon {
+            height: 190px;
+        }
+    }
+
+
+}
+
+// + 1280px
+@media (min-width: 1280px) {
+    .hero {
+        &__email-movile-icon {
+            display: none;
+        }
+
+        &__social-media-container {
+
+            justify-content: flex-start;
+            height: fit-content;
+
+        }
+
+        &__right-line-icon {
+            height: 190px;
+        }
+    }
+}

@@ -1,61 +1,100 @@
-<div class="hero">
+<section class="hero-section ">
+    <div class="hero">
 
-    <div class="hero__central-container">
-        <h1 class="hero__title">Cristian Jaraba</h1>
-        <span class="hero__work-title">Full Stack Developer</span>
-        <div class="hero__links-container">
-            <a class="hero__marquee hero__marquee--work" href="#work">
-                <div class="hero__marquee-track">
-                    <div class="hero__marquee-content">
-                        <span>Check my work</span>
+        <div class="hero__central-container">
+            <div class="hero__titles-container">
+                <h1 class="hero__title">Cristian Jaraba</h1>
+                <span class="hero__work-title">Full Stack Developer</span>
+            </div>
+            <div class="hero__links-container">
+                <a class="hero__marquee hero__marquee--work" href="#work">
+                    <div class="hero__marquee-track">
+                        <div class="hero__marquee-content">
+                            <span>Check my work</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a class="hero__marquee hero__marquee--contact" href="#contact">
-                <div class="hero__marquee-track">
-                    <div class="hero__marquee-content">
-                        <span>Contact me</span>
+                </a>
+                <a class="hero__marquee hero__marquee--contact" href="#contact">
+                    <div class="hero__marquee-track">
+                        <div class="hero__marquee-content">
+                            <span>Contact me</span>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="hero__lines-container">
+        <div class="hero__lines-container">
 
-        <div class="hero__line hero__line--left">
-            <div class="hero__arrow-container">
-                <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M4.18188 0.5C4.18188 0.223858 3.95803 0 3.68188 0C3.40574 0 3.18188 0.223858 3.18188 0.5H4.18188ZM3.32833 12.8536C3.52359 13.0488 3.84018 13.0488 4.03544 12.8536L7.21742 9.67157C7.41268 9.47631 7.41268 9.15973 7.21742 8.96447C7.02216 8.7692 6.70557 8.7692 6.51031 8.96447L3.68188 11.7929L0.853458 8.96447C0.658195 8.7692 0.341613 8.7692 0.146351 8.96447C-0.0489113 9.15973 -0.0489113 9.47631 0.146351 9.67157L3.32833 12.8536ZM3.18188 0.5V12.5H4.18188V0.5H3.18188Z"
-                        fill="white" />
+            <div class="hero__line hero__line--left">
+                <div class="hero__arrow-container">
+                    <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.18188 0.5C4.18188 0.223858 3.95803 0 3.68188 0C3.40574 0 3.18188 0.223858 3.18188 0.5H4.18188ZM3.32833 12.8536C3.52359 13.0488 3.84018 13.0488 4.03544 12.8536L7.21742 9.67157C7.41268 9.47631 7.41268 9.15973 7.21742 8.96447C7.02216 8.7692 6.70557 8.7692 6.51031 8.96447L3.68188 11.7929L0.853458 8.96447C0.658195 8.7692 0.341613 8.7692 0.146351 8.96447C-0.0489113 9.15973 -0.0489113 9.47631 0.146351 9.67157L3.32833 12.8536ZM3.18188 0.5V12.5H4.18188V0.5H3.18188Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <svg class="hero__left-line-icon" width="1" height="241" viewBox="0 0 1 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 240C0 240.276 0.223858 240.5 0.5 240.5C0.776142 240.5 1 240.276 1 240H0ZM0 0V240H1V0H0Z"
+                        fill="#3DCFB6" />
                 </svg>
             </div>
-            <svg width="1" height="241" viewBox="0 0 1 241" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 240C0 240.276 0.223858 240.5 0.5 240.5C0.776142 240.5 1 240.276 1 240H0ZM0 0V240H1V0H0Z"
-                    fill="#3DCFB6" />
-            </svg>
-        </div>
 
-        <div class="hero__line hero__line--right">
+            <div class="hero__line hero__line--right">
 
-            <a class="hero__email" href="mailto:cristianjaraba@hotmail.com">cristianjaraba@hotmail.com</a>
-
-            <div class="hero__social-media-container">
-                @for (item of socialMediaItems; track item.label) {
-                <a target="_blank" rel="noopener" [href]="item.href" [attr.aria-label]="item.label">
-                    <span class="icon" [innerHTML]="item.icon"></span>
-                    <span class="point"></span>
+                <a class="hero__email" href="mailto:cristianjaraba@hotmail.com">
+                    <span>cristianjaraba@hotmail.com</span>
                 </a>
-                }
+
+
+
+                <div class="hero__social-media-container">
+                    <a class="hero__email-movile" href="mailto:cristianjaraba@hotmail.com">
+                        <svg class="hero__email-movile-icon" width="26" height="26" viewBox="0 0 27 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.66667 21.3333C1.93333 21.3333 1.30556 21.0722 0.783333 20.55C0.261111 20.0278 0 19.4 0 18.6667V2.66667C0 1.93333 0.261111 1.30556 0.783333 0.783333C1.30556 0.261111 1.93333 0 2.66667 0H24C24.7333 0 25.3611 0.261111 25.8833 0.783333C26.4056 1.30556 26.6667 1.93333 26.6667 2.66667V18.6667C26.6667 19.4 26.4056 20.0278 25.8833 20.55C25.3611 21.0722 24.7333 21.3333 24 21.3333H2.66667ZM13.3333 11.7667C13.4444 11.7667 13.5611 11.75 13.6833 11.7167C13.8056 11.6833 13.9222 11.6333 14.0333 11.5667L23.4667 5.66667C23.6444 5.55556 23.7778 5.41667 23.8667 5.25C23.9556 5.08333 24 4.9 24 4.7C24 4.25556 23.8111 3.92222 23.4333 3.7C23.0556 3.47778 22.6667 3.48889 22.2667 3.73333L13.3333 9.33333L4.4 3.73333C4 3.48889 3.61111 3.48333 3.23333 3.71667C2.85556 3.95 2.66667 4.27778 2.66667 4.7C2.66667 4.92222 2.71111 5.11667 2.8 5.28333C2.88889 5.45 3.02222 5.57778 3.2 5.66667L12.6333 11.5667C12.7444 11.6333 12.8611 11.6833 12.9833 11.7167C13.1056 11.75 13.2222 11.7667 13.3333 11.7667Z"
+                                fill="white" />
+                        </svg>
+                        <span class="point"></span>
+                    </a>
+                    @for (item of socialMediaItems; track item.label) {
+                    <a target="_blank" rel="noopener" [href]="item.href" [attr.aria-label]="item.label">
+                        <span class="icon" [innerHTML]="item.icon"></span>
+                        <span class="point"></span>
+                    </a>
+                    }
+                </div>
+
+                <svg class="hero__right-line-icon"  width="1" height="187" viewBox="0 0 1 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 186C0 186.276 0.223858 186.5 0.5 186.5C0.776142 186.5 1 186.276 1 186H0ZM0 0V186H1V0H0Z"
+                        fill="white" />
+                </svg>
+
             </div>
 
-            <svg width="1" height="187" viewBox="0 0 1 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 186C0 186.276 0.223858 186.5 0.5 186.5C0.776142 186.5 1 186.276 1 186H0ZM0 0V186H1V0H0Z"
-                    fill="white" />
-            </svg>
-
         </div>
-
     </div>
-</div>
+
+    <div class="hero-section__marquee-track">
+        <div class="hero-section__marquee-content">
+            <span class="hero-section__item">Open to work</span>
+            <span class="hero-section__item">Available for remote work</span>
+            <span class="hero-section__item">Full Stack Developer</span>
+            <span class="hero-section__item">Based in Berlin</span>
+        </div>
+        <div class="hero-section__marquee-content">
+            <span class="hero-section__item">Open to work</span>
+            <span class="hero-section__item">Available for remote work</span>
+            <span class="hero-section__item">Full Stack Developer</span>
+            <span class="hero-section__item">Based in Berlin</span>
+        </div>
+        <div class="hero-section__marquee-content">
+            <span class="hero-section__item">Open to work</span>
+            <span class="hero-section__item">Available for remote work</span>
+            <span class="hero-section__item">Full Stack Developer</span>
+            <span class="hero-section__item">Based in Berlin</span>
+        </div>
+    </div>
+
+</section>
