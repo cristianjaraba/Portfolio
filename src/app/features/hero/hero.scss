@@ -317,7 +317,6 @@
 
     &__email {
         width: 100%;
-        margin-bottom: -20px;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
 
@@ -330,6 +329,15 @@
         &:hover {
             color: vars.$primary-green;
         }
+    }
+
+
+    // ========================================
+    // Email mobile (oculto por defecto)
+    // ========================================
+
+    &__email-movile {
+        display: none;
     }
 
 
@@ -397,6 +405,10 @@
             }
         }
 
+        &__email-movile {
+            display: flex;
+        }
+
         &__line--right {
             gap: 15px;
         }
@@ -419,6 +431,24 @@
         &__marquee {
             height: fit-content;
             width: 130px;
+            color: vars.$primary-green;
+            border: 1px solid vars.$primary-green;
+
+            &-track {
+                color: vars.$primary-green;
+                animation: marquee-content 4s linear infinite;
+            }
+
+            span {
+                color: vars.$primary-green;
+            }
+
+            &:hover {
+
+                .hero__marquee-track {
+                    animation: none;
+                }
+            }
         }
 
         &__social-media-container {
@@ -477,6 +507,10 @@
             }
         }
 
+        &__email-movile {
+            display: flex;
+        }
+
         &__line--right {
             gap: 15px;
         }
@@ -499,6 +533,24 @@
         &__marquee {
             height: fit-content;
             width: 160px;
+            color: vars.$primary-green;
+            border: 1px solid vars.$primary-green;
+
+            &-track {
+                color: vars.$primary-green;
+                animation: marquee-content 4s linear infinite;
+            }
+
+            span {
+                color: vars.$primary-green;
+            }
+
+            &:hover {
+
+                .hero__marquee-track {
+                    animation: none;
+                }
+            }
         }
 
         &__social-media-container {
@@ -529,41 +581,13 @@
     }
 }
 
-// 769 - 1279px
-@media (min-width: 769px) and (max-width: 1279px) {
-
+// 769px en adelante
+@media (min-width: 769px) {
     .hero {
-        &__email-movile-icon {
-            display: none;
-        }
 
         &__social-media-container {
-
             justify-content: flex-start;
             height: fit-content;
-
-        }
-
-        &__right-line-icon {
-            height: 190px;
-        }
-    }
-
-
-}
-
-// + 1280px
-@media (min-width: 1280px) {
-    .hero {
-        &__email-movile-icon {
-            display: none;
-        }
-
-        &__social-media-container {
-
-            justify-content: flex-start;
-            height: fit-content;
-
         }
 
         &__right-line-icon {

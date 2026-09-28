@@ -7,35 +7,35 @@
 // ==========================================================================
 
 header {
-    min-height: 100px;
-    @include mix.flex-center;
-    justify-content: space-between;
-    @include mix.content-limit;
-    @include mix.header-footer-padding-top;
+  min-height: 100px;
+  @include mix.flex-center;
+  justify-content: space-between;
+  @include mix.content-limit;
+  @include mix.header-footer-padding-top;
 }
 
 .header-left-container,
 ul {
-    @include mix.flex-center;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  @include mix.flex-center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-    font-family: 'Fira Code';
-    font-size: clamp(19px, 1.6vw, 23px);
-    color: white;
+  font-family: 'Fira Code';
+  font-size: clamp(19px, 1.6vw, 23px);
+  color: white;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 // ==========================================================================
 // Nav links
 // ==========================================================================
 
-nav{
+nav {
   @include mix.navigation-links(100% 0 0 50%, 10px, x);
 }
 
@@ -45,33 +45,33 @@ nav{
 // ==========================================================================
 
 .lang-btn-container {
-    width: fit-content;
-    height: 30px;
-    border: 1px solid vars.$primary-green;
-    border-radius: 20px;
-    display: flex;
+  width: fit-content;
+  height: 30px;
+  border: 1px solid vars.$primary-green;
+  border-radius: 20px;
+  display: flex;
 
-    &:hover {
-        border-color: white;
-    }
+  &:hover {
+    border-color: white;
+  }
 }
 
 .lang-btn {
-    @include mix.lang-btn-base;
-    flex: 1;
+  @include mix.lang-btn-base;
+  flex: 1;
 }
 
 .lang-btn--activated:hover~.lang-btn,
 .lang-btn:has(~ .lang-btn--activated:hover) {
-    color: vars.$primary-green;
+  color: vars.$primary-green;
 }
 
 // ==========================================================================
 // Personal logo
 // ==========================================================================
 
-.personal-logo{
-    @include mix.personal-logo;
+.personal-logo {
+  @include mix.personal-logo;
 }
 
 // ==========================================================================
@@ -79,49 +79,49 @@ nav{
 // ======================================
 
 .navigation_menu {
-    a {
-        cursor: pointer;
+  a {
+    cursor: pointer;
 
-        svg {
-            transform: scale(1, 1);
-            transition: transform 0.5s ease;
-            height: 100%;
-        }
+    svg {
+      transform: scale(1, 1);
+      transition: transform 0.5s ease;
+      height: 100%;
     }
+  }
 
-    a:active {
-        svg {
-            transform: scale(1.15, 1.1);
+  a:active {
+    svg {
+      transform: scale(1.15, 1.1);
 
-            path {
-                fill: vars.$primary-green;
-            }
-        }
+      path {
+        fill: vars.$primary-green;
+      }
     }
+  }
 }
 
 dialog {
-    height: 250px;
-    width: 240px;
-    background: vars.$background-gradient-dialog;
-    @include mix.flex-column;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid vars.$primary-green;
-    position: fixed;
-    margin: 0;
-    inset: auto;
+  height: 250px;
+  width: 240px;
+  background: vars.$background-gradient-dialog;
+  @include mix.flex-column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid vars.$primary-green;
+  position: fixed;
+  margin: 0;
+  inset: auto;
 
-    ul {
-        @include mix.flex-column;
-    }
+  ul {
+    @include mix.flex-column;
+  }
 }
 
 dialog:not([open]) {
-    display: none;
+  display: none;
 }
 
 // ==========================================================================
@@ -130,45 +130,70 @@ dialog:not([open]) {
 
 // 0 - 480px
 @media (max-width: 480px) {
-  .header-left-container{
+  .header-left-container {
     display: none;
   }
-  .navigation_menu{
+
+  .navigation_menu {
     display: flex;
   }
-  header{
+
+  header {
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  dialog {
+    width: 180px;
+
+    li {
+      font-size: 18px;
+    }
+  }
 }
+
+
 
 // 481 - 768px
 @media (min-width: 481px) and (max-width: 768px) {
-  .header-left-container{
+  .header-left-container {
     display: none;
   }
-  .navigation_menu{
+
+  .navigation_menu {
     display: flex;
   }
+
+  dialog {
+    width: 200px;
+
+    li {
+      font-size: 18px;
+    }
+  }
+
 }
+
+
 
 // 769 - 1279px
 @media (min-width: 769px) and (max-width: 1279px) {
-  .header-left-container{
+  .header-left-container {
     display: flex;
   }
-  .navigation_menu{
+
+  .navigation_menu {
     display: none;
   }
 }
 
 // + 1280px
 @media (min-width: 1280px) {
-  .header-left-container{
+  .header-left-container {
     display: flex;
   }
-  .navigation_menu{
+
+  .navigation_menu {
     display: none;
   }
 }
-
