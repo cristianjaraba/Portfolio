@@ -6,15 +6,15 @@
         <div class="hero__links-container">
             <a class="hero__marquee hero__marquee--work" href="#work">
                 <div class="hero__marquee-track">
-                    <div class="hero__marquee-content"> 
-                        <span>Check my work</span> 
+                    <div class="hero__marquee-content">
+                        <span>Check my work</span>
                     </div>
                 </div>
             </a>
             <a class="hero__marquee hero__marquee--contact" href="#contact">
                 <div class="hero__marquee-track">
-                    <div class="hero__marquee-content"> 
-                        <span>Contact me</span> 
+                    <div class="hero__marquee-content">
+                        <span>Contact me</span>
                     </div>
                 </div>
             </a>
@@ -43,7 +43,10 @@
 
             <div class="hero__social-media-container">
                 @for (item of socialMediaItems; track item.label) {
-                <a target="_blank" [href]="item.href" [innerHTML]="item.icon"></a>
+                <a target="_blank" rel="noopener" [href]="item.href" [attr.aria-label]="item.label">
+                    <span class="icon" [innerHTML]="item.icon"></span>
+                    <span class="point"></span>
+                </a>
                 }
             </div>
 

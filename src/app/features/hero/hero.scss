@@ -289,6 +289,11 @@
 
     &__social-media-container {
         @include mix.flex-column;
+        @include mix.navigation-links(0 0 0 100%, 5px, y, vars.$primary-green);
+        .point{
+            margin-right: 0;
+            margin-left: 5px;
+        }
 
         gap: 5px;
 
