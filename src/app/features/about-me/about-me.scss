@@ -1,3 +1,266 @@
-p{
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mix;
+
+.about-me-section {
+    @include mix.content-limit;
+    height: 100dvh;
     color: white;
+    @include mix.flex-center;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+    &__container {
+        border-radius: 40px;
+        height: 85%;
+        width: 45%;
+
+        &--foto {
+            align-self: flex-start;
+            position: relative;
+            background-image: url('../../../assets/images/lukas.jpg');
+            background-position: center;
+            background-size: cover;
+
+            &-shadow {
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 100%;
+                height: 100%;
+                background: repeating-linear-gradient(45deg,
+                        vars.$primary-green 0 2px,
+                        transparent 2px 24px);
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            &:hover &-shadow {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+
+        &--text {
+            @include mix.flex-column;
+            justify-content: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            background-color: #3DCFB61A;
+            border: 1px solid vars.$primary-green;
+            align-self: flex-end;
+            color: white;
+            position: relative;
+
+            h2 {
+                position: absolute;
+                top: -40px;
+                font-family: 'Karla';
+                width: 500;
+                color: vars.$primary-green;
+                font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+            }
+
+            h3 {
+                font-family: 'Fira Code';
+                font-weight: bold;
+                color: vars.$primary-green;
+                font-size: clamp(2.25rem, 1.9rem + 1.5vw, 4rem);
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-family: 'Karla';
+                font-size: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                font-family: 'Karla';
+                font-size: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+                @include mix.flex-column;
+                gap: 1rem;
+                margin-top: 2rem;
+
+                li {
+                    list-style: none;
+                    @include mix.flex-center;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    color: #FFFFFFCC;
+                    transition: color 0.2s ease-in-out;
+
+                    &:hover {
+                        color: white;
+                    }
+
+                    svg {
+                        flex-shrink: 0;
+                    }
+
+                    .about-me-section__icon-location {
+                        width: 22px;
+                        height: 26px;
+                    }
+
+                    .about-me-section__icon-cognition {
+                        width: 26px;
+                        height: 27px;
+                    }
+
+                    .about-me-section__icon-realises {
+                        width: 29px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+    }
 }
+
+// ========================================
+// Responsive Design
+// ========================================
+
+// 0 - 480px
+@media (max-width: 480px) {
+    .about-me-section {
+        height: auto;
+        min-height: 100dvh;
+        flex-direction: column;
+        gap: 4rem;
+
+        &__container {
+            &--foto {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                height: auto;
+
+                &-shadow {
+                    top: 10px;
+                    right: 10px;
+                    background: repeating-linear-gradient(45deg,
+                            vars.$primary-green 0 1px,
+                            transparent 2px 14px);
+                }
+            }
+
+            &--text {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// 481 - 768px
+@media (min-width: 481px) and (max-width: 768px) {
+    .about-me-section {
+        height: auto;
+        min-height: 100dvh;
+        flex-direction: column;
+        gap: 4rem;
+
+        &__container {
+            &--foto {
+                width: 70%;
+                aspect-ratio: 1 / 1;
+                height: auto;
+                align-self: center;
+
+                &-shadow {
+                    top: 10px;
+                    right: 10px;
+                    background: repeating-linear-gradient(45deg,
+                            vars.$primary-green 0 1px,
+                            transparent 2px 14px);
+                }
+            }
+
+            &--text {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// 769 - 1279px
+@media (min-width: 769px) and (max-width: 1279px) {
+    .about-me-section {
+        height: auto;
+        min-height: 100dvh;
+        align-items: flex-start;
+        padding-top: 4rem;
+
+        &__container {
+            height: auto;
+
+            &--foto {
+                aspect-ratio: 4 / 5;
+                align-self: flex-start;
+                max-height: 70dvh;
+            }
+
+            &--text {
+                min-height: 70%;
+                align-self: flex-end;
+                height: auto;
+                padding: 1rem 1.5rem;
+
+                h3 {
+                    font-size: 2.25rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                p,
+                ul {
+                    font-size: 1rem;
+                }
+
+                ul {
+                    gap: 0.75rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// 769 - 1279px, tablet vertical (una columna)
+@media (min-width: 769px) and (max-width: 1279px) and (orientation: portrait) {
+    .about-me-section {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        height: auto;
+        min-height: 100dvh;
+
+        &__container {
+            width: 100%;
+            height: auto;
+
+            &--foto {
+                width: 50%;
+                aspect-ratio: 1 / 1;
+                max-height: none;
+                align-self: center;
+            }
+        }
+    }
+}
+
+// + 1280px
+@media (min-width: 1280px) {}

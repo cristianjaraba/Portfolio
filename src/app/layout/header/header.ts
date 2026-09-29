@@ -1,8 +1,9 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Language } from '../../core/interfaces/language';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
@@ -18,9 +19,9 @@ export class Header {
   activeLang: string = 'de';
 
   navItems = [
-    { label: 'About me', href: '' },
-    { label: 'Skills', href: '' },
-    { label: 'Projects', href: '' }
+    { label: 'About me', fragment: 'about-me'  },
+    { label: 'Skills', fragment: 'skills'  },
+    { label: 'Projects', fragment: 'projects' }
   ];
 
   @ViewChild('navigation_dialog')

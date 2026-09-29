@@ -14,7 +14,7 @@
     }
 
     .personal-logo {
-        @include mix.personal-logo(clamp(1.4rem, 2vw, 1.75rem));
+        @include mix.personal-logo(clamp(1.4rem, 2ddvw, 1.75rem));
         width: fit-content;
     }
 
@@ -51,7 +51,7 @@
 footer {
     @include mix.content-limit;
     @include mix.header-footer-padding-top;
-    padding-bottom: clamp(10px, 4vh, 40px);
+    padding-bottom: clamp(10px, 4dvh, 40px);
 }
 
 // 0 - 480px

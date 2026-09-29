@@ -12,7 +12,7 @@
             <ul>
                 @for (item of navItems; track item.label) {
                 <li>
-                    <a [href]="item.href"><span class="point"></span>{{ item.label }}</a>
+                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.label }}</a>
                 </li>
                 }
             </ul>
@@ -39,23 +39,23 @@
         </a>
     </div>
     <dialog closedby="any" #navigation_dialog>
-            <nav>
-                <ul>
-                    @for (item of navItems; track item.label) {
-                    <li>
-                        <a [href]="item.href"><span class="point"></span>{{ item.label }}</a>
-                    </li>
-                    }
-                </ul>
-            </nav>
-            <div class="lang-btn-container">
-                @for (lang of languages; track lang.code) {
-                <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang"
-                    [disabled]="lang.code === activeLang" (click)="setLanguage(lang.code)">
-                    {{ lang.label }}
-                </button>
+        <nav>
+            <ul>
+                @for (item of navItems; track item.label) {
+                <li>
+                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.label }}</a>
+                </li>
                 }
-            </div>
-        </dialog>
+            </ul>
+        </nav>
+        <div class="lang-btn-container">
+            @for (lang of languages; track lang.code) {
+            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang"
+                [disabled]="lang.code === activeLang" (click)="setLanguage(lang.code)">
+                {{ lang.label }}
+            </button>
+            }
+        </div>
+    </dialog>
 
 </header>
