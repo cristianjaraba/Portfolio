@@ -21,7 +21,8 @@
     flex-direction: column;
     gap: 2rem;
     color: white;
-    padding-block: 5%;
+    padding-top: 40px;
+    padding-bottom: 100px;
 
     &__item {
         @include mix.flex-column;
@@ -60,7 +61,7 @@
                 top: -40px;
                 font-family: 'Karla';
                 color: vars.$primary-green;
-                font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+                font-size: vars.$font-size-h2;
             }
 
             h3 {
@@ -68,13 +69,13 @@
                 font-weight: bold;
                 text-align: center;
                 color: vars.$primary-green;
-                font-size: clamp(2.25rem, 1.9rem + 1.5vw, 4rem);
+                font-size: vars.$font-size-h3;
                 margin-bottom: 2rem;
             }
 
             p {
                 font-family: 'Karla';
-                font-size: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+                font-size: vars.$font-size-text;
 
                 &.skills-section__question {
                     font-weight: bold;
@@ -108,7 +109,6 @@
 
 .skill-wrapper {
     position: relative;
-    cursor: pointer;
 
     .learning-dialog {
         position: absolute;
@@ -182,16 +182,14 @@
 @media (min-width: 769px) {
     .skills-section {
         flex-direction: row;
-        align-items: flex-start;
         justify-content: center;
         gap: 40px;
         min-height: 100dvh;
-        padding-top: 4rem;
+        padding-bottom: 0px;
 
         &__container {
             &--icons {
                 width: 630px;
-                align-self: flex-start;
                 gap: 40px;
             }
 
@@ -200,7 +198,7 @@
 
                 h3 {
                     text-align: left;
-                    font-size: 2.25rem;
+                    font-size: vars.$font-size-h3-desktop;
                 }
             }
         }

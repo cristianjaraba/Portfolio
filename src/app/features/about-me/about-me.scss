@@ -3,21 +3,22 @@
 
 .about-me-section {
     @include mix.content-limit;
-    height: 100dvh;
-    color: white;
     @include mix.flex-center;
-    justify-content: space-between;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    min-height: 100dvh;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     &__container {
         border-radius: 40px;
-        height: 85%;
-        width: 45%;
 
         &--foto {
-            align-self: flex-start;
             position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
             background-image: url('../../../assets/images/lukas.jpg');
             background-position: center;
             background-size: cover;
@@ -26,13 +27,13 @@
                 opacity: 0;
                 z-index: -1;
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: 10px;
+                right: 10px;
                 width: 100%;
                 height: 100%;
                 background: repeating-linear-gradient(45deg,
-                        vars.$primary-green 0 2px,
-                        transparent 2px 24px);
+                        vars.$primary-green 0 1px,
+                        transparent 2px 14px);
                 transition: opacity 0.2s ease-in-out;
             }
 
@@ -45,13 +46,13 @@
         &--text {
             @include mix.flex-column;
             justify-content: center;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            position: relative;
+            width: 100%;
+            padding: 2rem;
+            margin-top: 40px;
             background-color: #3DCFB61A;
             border: 1px solid vars.$primary-green;
-            align-self: flex-end;
             color: white;
-            position: relative;
 
             h2 {
                 position: absolute;
@@ -59,27 +60,28 @@
                 font-family: 'Karla';
                 width: 500;
                 color: vars.$primary-green;
-                font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+                font-size: vars.$font-size-h2;
             }
 
             h3 {
                 font-family: 'Fira Code';
                 font-weight: bold;
+                text-align: center;
                 color: vars.$primary-green;
-                font-size: clamp(2.25rem, 1.9rem + 1.5vw, 4rem);
+                font-size: vars.$font-size-h3;
                 margin-bottom: 1rem;
             }
 
             p {
                 font-family: 'Karla';
-                font-size: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+                font-size: vars.$font-size-text;
             }
 
             ul {
                 margin: 0;
                 padding: 0;
                 font-family: 'Karla';
-                font-size: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+                font-size: vars.$font-size-text;
                 @include mix.flex-column;
                 gap: 1rem;
                 margin-top: 2rem;
@@ -121,113 +123,63 @@
 }
 
 // ========================================
-// Responsive Design
+// Responsive Design (mobile first)
 // ========================================
 
-// 0 - 480px
-@media (max-width: 480px) {
+// 481px+
+@media (min-width: 481px) {
     .about-me-section {
-        height: auto;
-        min-height: 100dvh;
-        flex-direction: column;
-        gap: 4rem;
 
         &__container {
             &--foto {
-                width: 100%;
-                aspect-ratio: 1 / 1;
-                height: auto;
+                width: 360px;
+                height: 360px;
+                
 
-                &-shadow {
-                    top: 10px;
-                    right: 10px;
-                    background: repeating-linear-gradient(45deg,
-                            vars.$primary-green 0 1px,
-                            transparent 2px 14px);
-                }
-            }
-
-            &--text {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-
-                h3 {
-                    text-align: center;
-                }
             }
         }
     }
 }
 
-// 481 - 768px
-@media (min-width: 481px) and (max-width: 768px) {
+// 769px+
+@media (min-width: 769px) {
     .about-me-section {
-        height: auto;
-        min-height: 100dvh;
-        flex-direction: column;
-        gap: 4rem;
-
-        &__container {
-            &--foto {
-                width: 70%;
-                aspect-ratio: 1 / 1;
-                height: auto;
-                align-self: center;
-
-                &-shadow {
-                    top: 10px;
-                    right: 10px;
-                    background: repeating-linear-gradient(45deg,
-                            vars.$primary-green 0 1px,
-                            transparent 2px 14px);
-                }
-            }
-
-            &--text {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-
-                h3 {
-                    text-align: center;
-                }
-            }
-        }
-    }
-}
-
-// 769 - 1279px
-@media (min-width: 769px) and (max-width: 1279px) {
-    .about-me-section {
-        height: auto;
-        min-height: 100dvh;
+        flex-direction: row;
         align-items: flex-start;
-        padding-top: 4rem;
+        justify-content: center;
+        gap: 40px;
 
         &__container {
-            height: auto;
-
             &--foto {
-                aspect-ratio: 4 / 5;
+                width: 400px;
+                height: 400px;
                 align-self: flex-start;
-                max-height: 70dvh;
+
+                
             }
 
             &--text {
-                min-height: 70%;
-                align-self: flex-end;
-                height: auto;
-                padding: 1rem 1.5rem;
+                width: 530px;
 
                 h3 {
-                    font-size: 2.25rem;
-                    margin-bottom: 0.5rem;
+                    text-align: left;
+                    font-size: vars.$font-size-h3-desktop;
                 }
+            }
+        }
+    }
+}
 
-                p,
-                ul {
-                    font-size: 1rem;
+// 769px 
+@media (min-width: 769px) {
+    .about-me-section {
+        padding-bottom: 0px;
+        &__container {
+            
+            &--text {
+                align-self: flex-end;
+                h3 {
+                    margin-bottom: 0.5rem;
                 }
 
                 ul {
@@ -239,28 +191,26 @@
     }
 }
 
-// 769 - 1279px, tablet vertical (una columna)
-@media (min-width: 769px) and (max-width: 1279px) and (orientation: portrait) {
+// 1280px+
+@media (min-width: 1280px) {
     .about-me-section {
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-        height: auto;
-        min-height: 100dvh;
+        gap: 90px;
 
-        &__container {
-            width: 100%;
-            height: auto;
-
+         &__container {
             &--foto {
-                width: 50%;
-                aspect-ratio: 1 / 1;
-                max-height: none;
-                align-self: center;
+                width: 500px;
+                height: 500px;
+
+                &-shadow {
+                    top: 40px;
+                    right: 40px;
+                    background: repeating-linear-gradient(45deg,
+                            vars.$primary-green 0 2px,
+                            transparent 2px 24px);
+                }
+
             }
+
         }
     }
 }
-
-// + 1280px
-@media (min-width: 1280px) {}
