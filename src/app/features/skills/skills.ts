@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './skills.scss',
   templateUrl: './skills.html',
 })
-export class Skills {}
+export class Skills {
+
+  icons = ['HTML',
+    'CSS',
+    'JavaScript',
+    'REST-API',
+    'TypeScript',
+    'Angular',
+    'Git',
+    'Material Design',
+    'Scrum',
+    'Growth mindset'
+  ];
+
+}

@@ -155,3 +155,71 @@
 // Marquee
 // ==========================================================================
 
+
+@mixin marquee-button($width: 170px, $color: white, $hover-color: vars.$primary-green) {
+    // & = selector 
+    $track: #{&}-track;
+
+    @keyframes marquee-content {
+        0%   { transform: translateX(0);     opacity: 1; }
+        45%  { transform: translateX(-150%); opacity: 1; }
+        50%  { transform: translateX(-150%); opacity: 0; }
+        51%  { transform: translateX(150%); }
+        55%  { opacity: 1; }
+        100% { transform: translateX(0);     opacity: 1; }
+    }
+
+    @include remove-link-style($color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $width;
+    padding: 15px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid $color;
+    border-radius: 30px;
+    font-family: 'Karla';
+    font-size: 18px;
+    transition: border 0.2s ease-in-out;
+
+    #{$track} {
+        display: flex;
+        width: max-content;
+        flex-shrink: 0;
+        color: $color;
+        transition: color 0.2s ease-in-out;
+    }
+
+    #{$track} span {
+        font-size: clamp(16px, 1dvw, 18px);
+    }
+
+    &:hover {
+        border-color: $hover-color;
+
+        #{$track} {
+            color: $hover-color;
+            animation: marquee-content 2s linear infinite;
+        }
+    }
+}
+
+@mixin marquee-button-mobile($width, $color: vars.$primary-green) {
+    $track: #{&}-track;
+
+    width: $width;
+    height: fit-content;
+    border-color: $color;
+
+    #{$track} {
+        color: $color;
+        animation: marquee-content 4s linear infinite;
+    }
+
+    &:hover #{$track} {
+        animation: none;
+    }
+}

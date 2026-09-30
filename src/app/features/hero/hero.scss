@@ -18,36 +18,6 @@
     }
 }
 
-@keyframes marquee-content {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    45% {
-        transform: translateX(-150%);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateX(-150%);
-        opacity: 0;
-    }
-
-    51% {
-        transform: translateX(150%);
-    }
-
-    55% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 @keyframes hero-section-marquee-content {
     to {
         transform: translateX(-100%);
@@ -143,7 +113,7 @@
 
     &__title {
         font-family: 'Karla';
-        font-size: clamp(38px, 8ddvw, 128px);
+        font-size: clamp(38px, 8dvw, 128px);
         text-align: center;
         margin-bottom: 2rem;
         color: #D9D9D9;
@@ -156,7 +126,7 @@
 
     &__work-title {
         font-family: 'Fira Code';
-        font-size: clamp(18px, 3ddvw, 40px);
+        font-size: clamp(18px, 3dvw, 40px);
         color: #D9D9D9;
     }
 
@@ -179,25 +149,7 @@
     // ========================================
 
     &__marquee {
-        @include mix.remove-link-style(white);
-
-        padding: 15px 20px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        overflow: hidden;
-
-        white-space: nowrap;
-
-        border: 1px solid white;
-        border-radius: 30px;
-
-        font-family: 'Karla';
-        font-size: 18px;
-
-        cursor: pointer;
+        @include mix.marquee-button(170px);
 
         &--work {
             width: 170px;
@@ -205,51 +157,6 @@
 
         &--contact {
             width: 135px;
-        }
-
-        transition: border 0.2s ease-in-out;
-
-        .hero__marquee-track {
-            transition: color 0.2s ease-in-out;
-            color: white;
-        }
-
-        &:hover {
-
-            border: 1px solid vars.$primary-green;
-
-            .hero__marquee-track {
-                transition: color 0.2s ease-in-out;
-                color: vars.$primary-green;
-                animation: marquee-content 2s linear infinite;
-            }
-        }
-    }
-
-
-    // ========================================
-    // Marquee track
-    // ========================================
-
-    &__marquee-track {
-        display: flex;
-
-        width: max-content;
-
-        flex-shrink: 0;
-    }
-
-
-    // ========================================
-    // Marquee content
-    // ========================================
-
-    &__marquee-content {
-        display: flex;
-        flex-shrink: 0;
-
-        span {
-            font-size: clamp(16px, 1ddvw, 18px);
         }
     }
 
@@ -429,26 +336,7 @@
         }
 
         &__marquee {
-            height: fit-content;
-            width: 130px;
-            color: vars.$primary-green;
-            border: 1px solid vars.$primary-green;
-
-            &-track {
-                color: vars.$primary-green;
-                animation: marquee-content 4s linear infinite;
-            }
-
-            span {
-                color: vars.$primary-green;
-            }
-
-            &:hover {
-
-                .hero__marquee-track {
-                    animation: none;
-                }
-            }
+            @include mix.marquee-button-mobile(130px);
         }
 
         &__social-media-container {
@@ -531,26 +419,7 @@
         }
 
         &__marquee {
-            height: fit-content;
-            width: 160px;
-            color: vars.$primary-green;
-            border: 1px solid vars.$primary-green;
-
-            &-track {
-                color: vars.$primary-green;
-                animation: marquee-content 4s linear infinite;
-            }
-
-            span {
-                color: vars.$primary-green;
-            }
-
-            &:hover {
-
-                .hero__marquee-track {
-                    animation: none;
-                }
-            }
+            @include mix.marquee-button-mobile(160px);
         }
 
         &__social-media-container {
@@ -581,7 +450,7 @@
     }
 }
 
-// 769px en adelante
+// 769px +
 @media (min-width: 769px) {
     .hero {
 
