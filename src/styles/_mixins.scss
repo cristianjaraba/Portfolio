@@ -223,3 +223,15 @@
         animation: none;
     }
 }
+
+// ==========================================================================
+// Stripes 
+// ==========================================================================
+
+@mixin stripes($angle: 45deg, $thickness: 1px, $gap: 14px, $color: vars.$primary-green) {
+  background: repeating-linear-gradient(
+    $angle,
+    $color 0 $thickness,
+    transparent ($thickness + 1px) ($thickness + 1px + $gap)
+  );
+}
