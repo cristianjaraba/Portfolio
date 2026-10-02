@@ -121,7 +121,7 @@
         align-items: center;
         padding: 1rem;
         box-sizing: border-box;
-        background: url('../../../assets/images/learning-dialog.png');
+        background-image: url('../../../assets/images/learning-dialog-mobile.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -129,7 +129,7 @@
         text-align: center;
         color: #3DCFB6;
         font-family: "Karla";
-        font-size: 18px;
+        font-size: 16px;
         gap: 10px;
         opacity: 0;
         visibility: hidden;
@@ -176,10 +176,35 @@
     .skill-icon {
         width: 40px;
     }
+    .skill-wrapper {
+    position: relative;
+
+    .learning-dialog {
+        background-image: url('../../../assets/images/learning-dialog.png');
+    }
+}
+
+    
 }
 
 // 769px+
 @media (min-width: 769px) {
+
+    .skill-wrapper {
+    position: relative;
+
+    .learning-dialog {
+        font-size: 18px;
+    }
+
+}
+    
+
+}
+
+// 1044px+ /* desktop */
+
+@media (min-width: 1024px) {
     .skills-section {
         flex-direction: row;
         gap: 40px;
@@ -218,10 +243,8 @@
         width: 40px;
         height: auto;
     }
-
 }
-
-// 1280px+
+// 1280px+ /* big desktop */
 @media (min-width: 1280px) {
     .skills-section {
         gap: 90px;

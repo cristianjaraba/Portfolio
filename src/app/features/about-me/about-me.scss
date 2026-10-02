@@ -138,44 +138,32 @@
 }
 
 // 769px+
-@media (min-width: 769px) {
+@media (min-width: 769px) {}
+
+
+// 1024px+ /* desktop */
+
+@media (min-width: 1024px) {
     .about-me-section {
+        padding-bottom: 0px;
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
         gap: 40px;
 
         &__container {
-            &--foto {
-                width: 400px;
-                height: 400px;
-                align-self: flex-start;
-            }
-
-            &--text {
-                width: 530px;
-
-                h3 {
-                    text-align: left;
-                    font-size: vars.$font-size-h3-desktop;
-                }
-            }
-        }
-    }
-}
-
-// 769px 
-@media (min-width: 769px) {
-    .about-me-section {
-        padding-bottom: 0px;
-
-        &__container {
+            // width: 400px;
+            // height: 400px;
+            align-self: flex-start;
 
             &--text {
                 align-self: flex-end;
+                width: 530px;
 
                 h3 {
                     margin-bottom: 0.5rem;
+                    text-align: left;
+                    font-size: vars.$font-size-h3-desktop;
                 }
 
                 ul {
@@ -185,12 +173,6 @@
             }
         }
     }
-}
-
-// 1044px+ /* desktop */
-
-@media (min-width: 1024px){
-    
 }
 
 // 1280px+ /* desktop big */

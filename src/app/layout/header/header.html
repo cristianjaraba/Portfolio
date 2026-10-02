@@ -42,7 +42,7 @@
         <nav>
             <ul>
                 @for (item of navItems; track item.label) {
-                <li>
+                <li (click)="closeDialog()">
                     <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.label }}</a>
                 </li>
                 }
