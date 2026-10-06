@@ -1,0 +1,211 @@
+@use '../../../styles/mixins' as mix;
+@use '../../../styles/variables' as vars;
+
+.contact {
+    padding-bottom: 100px;
+    @include mix.content-limit;
+
+    &__eyebrow {
+        font-size: vars.$font-size-subhead;
+        color: vars.$primary-green;
+        font-family: 'Karla';
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        font-size: vars.$font-size-display;
+        color: vars.$primary-green;
+        font-family: 'Fira Code';
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    &__subhead {
+        font-size: vars.$font-size-subhead;
+        color: vars.$primary-green;
+        font-family: 'Karla';
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: vars.$font-size-body;
+        color: white;
+        font-family: 'Karla';
+        margin-bottom: 2rem;
+
+        span {
+            color: vars.$primary-green;
+            font-weight: bold;
+        }
+    }
+
+    &__form {
+        color: white;
+        @include mix.flex-column;
+    }
+
+    &__field {
+        @include mix.flex-column;
+        border-top: 1px solid vars.$primary-green;
+        gap: 10px;
+        padding: 15px 5px;
+        &:has(#message) {
+            border-bottom: 1px solid vars.$primary-green;
+            margin-bottom: 50px;
+        }
+
+    }
+
+    &__label {
+        color: vars.$primary-green;
+        font-size: vars.$font-size-subhead;
+        font-family: 'Fira Code';
+        font-weight: 500;
+    }
+
+    &__input {
+        background: transparent;
+        border: none;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: vars.$font-size-body;
+        color: white;
+
+        &::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        &--error {
+            color: #EC7B7BCC;
+
+            &::placeholder {
+                color: #EC7B7BCC;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__privacy {
+        @include mix.flex-center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        &-text {
+            font-family: 'Karla';
+            font-size: vars.$font-size-body;
+            color: white;
+
+            a {
+                color: vars.$primary-green;
+                cursor: default;
+                text-decoration: none;
+                transition: text-decoration 0.1s ease-in-out, color 0.1s ease-in-out;
+
+                &:hover{
+                    color: white;
+                    text-decoration: underline;
+                    text-decoration-color: vars.$primary-green;
+                    text-underline-offset: 5px;
+                }
+            }
+        }
+    }
+
+    &__error{
+        color: #EC7B7BCC;
+        font-family: 'Karla';
+        font-size: vars.$font-size-body;
+    }
+
+    &__button{
+        background: transparent;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    &__marquee{
+        @include mix.marquee-button(130px);
+    }
+
+    &__checkbox {
+    appearance: none;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid vars.$primary-green;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        background-color: rgba(vars.$primary-green, 0.5);
+    }
+
+    .contact__privacy:has(.contact__privacy-text:hover) &:hover {
+        background-color: transparent;
+    }
+
+    &:checked::after {
+        content: '✓';
+        position: absolute;
+        inset: 3px;
+        @include mix.flex-center;
+        color: vars.$primary-green;
+        font-size: 16px;
+    }
+}
+}
+
+// ========================================
+// Responsive Design (mobile first)
+// ========================================
+
+// 481px+
+@media (min-width: 481px) {
+    .contact {
+
+        &__text {
+            max-width: 400px;
+        }
+    }
+}
+
+// 769px+
+@media (min-width: 769px) {
+    .contact {
+
+        &__text-container,
+        &__form {
+            width: 100%;
+            max-width: 700px;
+        }
+    }
+}
+
+// 1024px+ /* desktop */
+
+@media (min-width: 1024px) {
+.contact {
+        @include mix.flex-center;
+        &__text-container{
+            @include mix.flex-column;
+            height: stretch;
+            justify-content: flex-start;
+        }
+    }
+}
+
+// 1280px+ /* desktop big */
+@media (min-width: 1280px) {
+    .contact {
+
+        &__text-container,
+        &__form {
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+}

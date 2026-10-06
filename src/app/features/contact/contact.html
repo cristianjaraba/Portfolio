@@ -1,2 +1,54 @@
-<section class="contact" id="contact">
+<section id="contact" class="contact">
+    <div class="contact__text-container">
+        <p class="contact__eyebrow">Contact me</p>
+        <h2 class="contact__heading">Let's work<br>together</h2>
+        <p class="contact__subhead">Got a problem to solve?</p>
+        <p class="contact__text">Encourage people to contact you and describe what role you are interested in. Show
+            that you'll add value to their projects through your work.</p>
+        <p class="contact__text">Need a Frontend developer? <span>Let's talk!</span></p>
+    </div>
+  <form class="contact__form" [formGroup]="userform" (ngSubmit)="formSubmit()">
+
+    <div class="contact__field">
+      <label class="contact__label" for="name">What's your name?</label>
+      <input class="contact__input" id="name" type="text" formControlName="firstName"
+        [placeholder]="namePlaceholder"
+        (blur)="checkName()"
+        [class.contact__input--error]="userform.controls.firstName.touched && userform.controls.firstName.invalid" />
+    </div>
+
+    <div class="contact__field">
+      <label class="contact__label" for="email">What's your email?</label>
+      <input class="contact__input" id="email" type="text" formControlName="email"
+        [placeholder]="emailPlaceholder"
+        (blur)="checkEmail()"
+        [class.contact__input--error]="userform.controls.email.touched && userform.controls.email.invalid" />
+    </div>
+
+    <div class="contact__field">
+      <label class="contact__label" for="message">How can I help you?</label>
+      <input class="contact__input" id="message" type="text" formControlName="message"
+        [placeholder]="messagePlaceholder"
+        (blur)="checkMessage()"
+        [class.contact__input--error]="userform.controls.message.touched && userform.controls.message.invalid" />
+    </div>
+
+    <div class="contact__privacy">
+      <input class="contact__checkbox" id="privacy-policy" type="checkbox" formControlName="privacyPolicy">
+      <label class="contact__privacy-text" for="privacy-policy">
+        I've read the <a href="" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+      </label>
+    </div>
+    @if (userform.controls.privacyPolicy.touched && userform.controls.privacyPolicy.invalid) {
+      <span class="contact__error">Please accept the privacy policy</span>
+    }
+    
+    <button class="contact__button contact__marquee" [disabled]="userform.invalid" type="submit">
+        <div class="contact__marquee-track">
+            <div class="contact__marquee-content">
+                <span>Say Hello ;)</span>
+            </div>
+        </div>
+    </button>
+  </form>
 </section>

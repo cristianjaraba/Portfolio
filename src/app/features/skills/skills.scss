@@ -58,9 +58,10 @@
 
             .skills-section__eyebrow {
                 position: absolute;
-                top: -40px;
+                bottom: 100%;
+                margin-bottom: 1rem;
+                left: 0;
                 font-family: 'Karla';
-                font-weight: bold;
                 color: vars.$primary-green;
                 font-size: vars.$font-size-subhead;
             }

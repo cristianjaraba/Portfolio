@@ -197,13 +197,17 @@
         font-size: clamp(16px, 1dvw, 18px);
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
         border-color: $hover-color;
 
         #{$track} {
             color: $hover-color;
             animation: marquee-content 2s linear infinite;
         }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
     }
 }
 
