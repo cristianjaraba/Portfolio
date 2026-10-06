@@ -15,12 +15,16 @@
 
     &__logo-link {
         display: block;
+        width: fit-content;
         text-decoration: none;
         color: inherit;
     }
 
     app-personal-logo {
         font-size: clamp(1.4rem, 2dvw, 1.75rem);
+        // Cancels the empty space left of the hexagon inside the logo viewBox,
+        // so its visible edge lines up with the info text below.
+        margin-left: -0.21em;
     }
 
     &__info {
