@@ -18,8 +18,8 @@
     padding-top: clamp(10px, 4vh, 40px);
 }
 
-@mixin content-limit($left-right: 20px){
-    padding: 0px max(calc(50% - 720px), $left-right);
+@mixin content-limit($left-right: 25px){
+    padding-inline: max(calc(50% - 720px), $left-right);
 }
 
 @mixin remove-link-style($color){

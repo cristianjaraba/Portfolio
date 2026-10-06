@@ -1,21 +1,32 @@
 @use '../../../../styles/variables' as vars;
 @use '../../../../styles/mixins' as mix;
 
+// ========================================
+// Base / mobile
+// ========================================
+
 .projects-dialog {
     position: fixed;
     inset: 0;
     margin: auto;
-    height: 95dvh;
-    width: 90dvw;
+    height: 100dvh;
+    width: 100dvw;
+    
     border: none;
     background: vars.$background-gradient-landing;
     padding: 15px;
     border-radius: 20px;
     justify-content: space-between;
-    outline:vars.$primary-green 1px solid;
+    outline: vars.$primary-green 1px solid;
 
-    &[open]{
+    &[open] {
         @include mix.flex-column;
+    }
+
+    &__media,
+    &__info,
+    &__title {
+        display: contents;
     }
 
     &__close-btn-container {
@@ -24,18 +35,19 @@
         justify-content: flex-end;
         margin-bottom: 20px;
 
-        svg{
+        svg {
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
 
-            path{
+            path {
                 transition: color 0.2s ease-in-out;
             }
 
             &:hover,
-            &:active{
+            &:active {
                 transform: scale(1.2);
-                path{
+
+                path {
                     fill: vars.$primary-green;
                 }
             }
@@ -55,7 +67,7 @@
 
     &__index {
         color: vars.$primary-green;
-        font-size: vars.$font-size-display;
+        font-size: 72px;
         font-family: 'Karla';
         font-style: bold;
     }
@@ -63,7 +75,7 @@
     &__heading {
         color: white;
         font-size: vars.$font-size-display;
-        font-family: 'Karla';
+        font-family: 'Fira Code';
         font-style: bold;
     }
 
@@ -73,7 +85,6 @@
         font-size: vars.$font-size-subhead;
         color: vars.$primary-green;
         margin-bottom: 20px;
-
     }
 
     &__text {
@@ -81,16 +92,14 @@
         color: white;
         font-size: vars.$font-size-body;
         margin-bottom: 10px;
-
     }
 
     &__skills {
         font-family: 'Karla';
         color: white;
-        font-size: 16px;
         font-size: vars.$font-size-body;
         @include mix.flex-center;
-        gap: 20px;
+        gap: 10px;
         flex-wrap: wrap;
         margin-bottom: 20px;
 
@@ -135,12 +144,13 @@
                     transform: translate(5px, -5px);
                 }
             }
-
         }
     }
 
     &__next {
-        justify-self: flex-end;
+        // Markup order puts it inside __media (right after the screenshot);
+        // on mobile it has to render last instead.
+        order: 1;
         width: 100%;
         @include mix.flex-center;
         justify-content: flex-end;
@@ -155,26 +165,113 @@
             @include mix.flex-center;
             gap: 5px;
 
-            span{
+            span {
                 transition: color 0.2s ease-in-out;
             }
 
-            svg{
+            svg {
                 transition: transform 0.2s ease-in-out;
             }
 
-            &:hover, 
-            &:active{
+            &:hover,
+            &:active {
 
-                span{
+                span {
                     color: white;
                 }
 
-                svg{
+                svg {
                     transform: translateX(5px) scale(1.2);
                 }
-
             }
         }
+    }
+}
+
+// ========================================
+// Responsive Design (mobile first)
+// ========================================
+
+// 481px+
+@media (min-width: 481px) {}
+.projects-dialog__screen-shot {
+        max-width: 440px;
+        margin: auto;
+    }
+// 769px+
+@media (min-width: 769px) {
+    
+
+}
+
+// 1024px+ /* desktop: two columns, media on the right */
+@media (min-width: 1024px) {
+
+    .projects-dialog {
+
+        &[open] {
+            @include mix.flex-center;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 40px;
+            gap: 50px;
+        }
+
+        &__media {
+            @include mix.flex-column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 50%;
+        }
+
+        &__info {
+            @include mix.flex-column;
+            width: 50%;
+            gap: 10px;
+        }
+
+        &__title {
+            display: block;
+        }
+
+        &__close-btn-container {
+            margin-bottom: 100px;
+        }
+
+        &__links {
+            justify-content: flex-start;
+
+            &-container {
+                padding: 15px 20px;
+                border-radius: 40px;
+            }
+        }
+
+        &__next {
+            order: 0;
+
+            button {
+                margin-top: 50px;
+            }
+        }
+
+        &__screen-shot {
+            max-width: 500px;
+            margin: 0 0 0 auto;
+        }
+
+        &__index {
+        
+        font-size: 128px;
+    }
+    }
+}
+
+// 1280px+ /* big desktop */
+@media (min-width: 1280px) {
+
+    .projects-dialog{
+        max-width: 1200px;
+        max-height: 650px;
     }
 }

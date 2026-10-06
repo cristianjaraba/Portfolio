@@ -41,6 +41,11 @@
     &__nav-items-container {
         @include mix.navigation-links(0 100% 0 0, 5px, y, vars.$primary-green);
         font-family: 'Karla';
+
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
     }
 }
 
@@ -58,8 +63,16 @@ footer {
 @media (max-width: 480px) {
     .footer {
         flex-wrap: wrap;
-        padding-left: 10px;
-        padding-right: 10px;
+        column-gap: 15px;
+
+        &__brand {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        &__nav-items-container {
+            flex: 0 0 auto;
+        }
 
         &__copy-right {
             display: none;
