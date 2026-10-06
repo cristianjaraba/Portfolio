@@ -36,7 +36,7 @@
     <div class="contact__privacy">
       <input class="contact__checkbox" id="privacy-policy" type="checkbox" formControlName="privacyPolicy">
       <label class="contact__privacy-text" for="privacy-policy">
-        I've read the <a href="" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+        I've read the <a [routerLink]="'/imprint'" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
       </label>
     </div>
     @if (userform.controls.privacyPolicy.touched && userform.controls.privacyPolicy.invalid) {

@@ -1,0 +1,19 @@
+@use '../../../styles/mixins' as mix;
+@use '../../../styles/variables' as vars;
+
+:host {
+    display: block;
+    flex: 1;
+}
+
+.landing {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: vars.$background-gradient-landing;
+
+    app-hero {
+        flex: 1;
+        display: flex;
+    }
+}

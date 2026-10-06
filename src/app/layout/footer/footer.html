@@ -12,7 +12,11 @@
         <ul>
             @for (item of navItems; track item.label) {
             <li>
+                @if (item.route) {
+                <a [routerLink]="item.route"><span class="point"></span>{{ item.label }}</a>
+                } @else {
                 <a [href]="item.href" target="_blank"><span class="point"></span>{{ item.label }}</a>
+                }
             </li>
             }
         </ul>
