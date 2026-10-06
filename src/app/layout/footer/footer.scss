@@ -13,9 +13,8 @@
         gap: 10px;
     }
 
-    .personal-logo {
-        @include mix.personal-logo(clamp(1.4rem, 2ddvw, 1.75rem));
-        width: fit-content;
+    app-personal-logo {
+        font-size: clamp(1.4rem, 2dvw, 1.75rem);
     }
 
     &__info {

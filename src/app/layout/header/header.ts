@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Language } from '../../core/interfaces/language';
 import { RouterLink } from '@angular/router';
+import { PersonalLogo } from '../../shared/components/personal-logo/personal-logo';
 
 @Component({
-  imports: [RouterLink],
+  imports: [RouterLink, PersonalLogo],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',

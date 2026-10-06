@@ -1,0 +1,92 @@
+@use '../../../../styles/mixins' as mix;
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/fonts';
+
+:host {
+  display: block;
+  width: fit-content;
+  font-size: inherit;
+}
+
+.personal-logo {
+  @include mix.flex-center;
+  gap: 0.3em;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Karla';
+  font-size: inherit;
+}
+
+// ==========================================================================
+// Mark
+// ==========================================================================
+
+.personal-logo__mark {
+  height: 2.2em;
+  width: 2.2em;
+  flex: none;
+  overflow: visible;
+}
+
+.personal-logo__frame {
+  fill: none;
+  stroke: vars.$primary-green;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  opacity: 0.5;
+  transition: opacity 0.35s ease, stroke-width 0.35s ease;
+}
+
+.personal-logo__monogram {
+  fill: none;
+  stroke: vars.$primary-green;
+  stroke-width: 7;
+  stroke-linecap: round;
+  transition: filter 0.35s ease;
+}
+
+// ==========================================================================
+// Wordmark
+// ==========================================================================
+
+.personal-logo__name {
+  color: white;
+  @include mix.flex-column;
+
+  span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 0.85;
+    -webkit-text-stroke: 1px white;
+    transition: -webkit-text-fill-color 0.3s ease;
+  }
+}
+
+// ==========================================================================
+// Hover
+// ==========================================================================
+
+.personal-logo:hover {
+  .personal-logo__frame {
+    opacity: 1;
+    stroke-width: 4;
+  }
+
+  .personal-logo__monogram {
+    filter: drop-shadow(0 0 4px rgba(61, 207, 182, 0.9));
+  }
+
+  .personal-logo__name span {
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .personal-logo__frame,
+  .personal-logo__monogram,
+  .personal-logo__name span {
+    transition: none;
+  }
+}
