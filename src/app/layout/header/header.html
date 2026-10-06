@@ -18,7 +18,9 @@
             </ul>
         </nav>
     </div>
-    <app-personal-logo />
+    <a class="header__logo-link" routerLink="/" aria-label="Home">
+        <app-personal-logo />
+    </a>
     <div class="navigation_menu" #menu>
         <a (click)="openDialog()">
             <svg class="navigation_menu__menu_icon" width="32" height="22" viewBox="0 0 32 22" fill="none"

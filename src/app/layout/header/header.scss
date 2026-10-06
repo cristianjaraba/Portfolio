@@ -53,6 +53,12 @@ nav {
   color: vars.$primary-green;
 }
 
+.header__logo-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 app-personal-logo {
   font-size: clamp(1.75rem, 2.8dvw, 2.75rem);
 }

@@ -39,7 +39,7 @@ export class ProjectService {
                 }],
                 gitHubLink: 'https://github.com/cristianjaraba',
                 LiveTestLink: '',
-                screenShot: 'assets/images/screenshots/join.png'
+                screenShot: 'assets/images/screenshots/join.jpg'
             },
             {
                 projectName: 'El Pollo Loco',
@@ -56,7 +56,7 @@ export class ProjectService {
                 }],
                 gitHubLink: 'https://github.com/cristianjaraba/El-pollo-loco',
                 LiveTestLink: '',
-                screenShot: 'assets/images/screenshots/el_pollo_loco_screen_shot.png'
+                screenShot: 'assets/images/screenshots/el_pollo_loco.jpg'
             },
             {
                 projectName: 'DABubble',
@@ -73,7 +73,7 @@ export class ProjectService {
                 }],
                 gitHubLink: 'https://github.com/cristianjaraba',
                 LiveTestLink: '',
-                screenShot: 'assets/images/screenshots/dabubble.png'
+                screenShot: 'assets/images/screenshots/dabubble.jpg'
             }
         ];
     }
