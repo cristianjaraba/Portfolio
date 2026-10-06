@@ -7,16 +7,16 @@
     min-height: 100dvh;
     padding-bottom: 100px;
 
-    &__title {
-        font-size: vars.$font-size-h2;
+    &__eyebrow {
+        font-size: vars.$font-size-subhead;
         color: vars.$primary-green;
         font-family: 'Karla';
         font-weight: bold;
         margin-bottom: 1rem;
     }
 
-    &__subtitle {
-        font-size: vars.$font-size-h3;
+    &__heading {
+        font-size: vars.$font-size-display;
         color: vars.$primary-green;
         font-family: 'Fira Code';
         font-weight: bold;
@@ -24,14 +24,14 @@
     }
 
     &__text {
-        font-size: vars.$font-size-text;
+        font-size: vars.$font-size-body;
         color: white;
         font-family: 'Karla';
         margin-bottom: 2rem;
     }
 
     &__name {
-        font-size: vars.$font-size-text;
+        font-size: vars.$font-size-body;
         color: white;
         font-family: 'Fira Code';
         font-weight: bold;
@@ -52,7 +52,7 @@
     }
 
     &__technology {
-        font-size: vars.$font-size-text;
+        font-size: vars.$font-size-body;
         color: white;
         font-family: 'Karla';
     }

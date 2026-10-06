@@ -1,0 +1,180 @@
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/mixins' as mix;
+
+.projects-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    height: 95dvh;
+    width: 90dvw;
+    border: none;
+    background: vars.$background-gradient-landing;
+    padding: 15px;
+    border-radius: 20px;
+    justify-content: space-between;
+    outline:vars.$primary-green 1px solid;
+
+    &[open]{
+        @include mix.flex-column;
+    }
+
+    &__close-btn-container {
+        width: 100%;
+        @include mix.flex-center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+
+        svg{
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+
+            path{
+                transition: color 0.2s ease-in-out;
+            }
+
+            &:hover,
+            &:active{
+                transform: scale(1.2);
+                path{
+                    fill: vars.$primary-green;
+                }
+            }
+        }
+    }
+
+    &__screen-shot {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        max-height: 40dvh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__index {
+        color: vars.$primary-green;
+        font-size: vars.$font-size-display;
+        font-family: 'Karla';
+        font-style: bold;
+    }
+
+    &__heading {
+        color: white;
+        font-size: vars.$font-size-display;
+        font-family: 'Karla';
+        font-style: bold;
+    }
+
+    &__subheading {
+        font-family: 'Fira Code';
+        font-style: bold;
+        font-size: vars.$font-size-subhead;
+        color: vars.$primary-green;
+        margin-bottom: 20px;
+
+    }
+
+    &__text {
+        font-family: 'Karla';
+        color: white;
+        font-size: vars.$font-size-body;
+        margin-bottom: 10px;
+
+    }
+
+    &__skills {
+        font-family: 'Karla';
+        color: white;
+        font-size: 16px;
+        font-size: vars.$font-size-body;
+        @include mix.flex-center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .skill-item {
+            @include mix.flex-center;
+            gap: 5px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    &__links {
+        @include mix.flex-center;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+
+        &-container {
+            cursor: pointer;
+            border: white 1px solid;
+            border-radius: 20px;
+            padding: 10px;
+            @include mix.flex-center;
+            gap: 5px;
+            font-family: 'Karla';
+            font-size: vars.$font-size-body;
+            @include mix.remove-link-style(white);
+            transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+
+            svg {
+                transition: transform 0.2s ease-in-out;
+            }
+
+            &:hover {
+                border: vars.$primary-green 1px solid;
+                color: vars.$primary-green;
+
+                svg {
+                    transform: translate(5px, -5px);
+                }
+            }
+
+        }
+    }
+
+    &__next {
+        justify-self: flex-end;
+        width: 100%;
+        @include mix.flex-center;
+        justify-content: flex-end;
+
+        button {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            color: vars.$primary-green;
+            font-family: 'Karla';
+            font-size: vars.$font-size-body;
+            @include mix.flex-center;
+            gap: 5px;
+
+            span{
+                transition: color 0.2s ease-in-out;
+            }
+
+            svg{
+                transition: transform 0.2s ease-in-out;
+            }
+
+            &:hover, 
+            &:active{
+
+                span{
+                    color: white;
+                }
+
+                svg{
+                    transform: translateX(5px) scale(1.2);
+                }
+
+            }
+        }
+    }
+}

@@ -1,14 +1,14 @@
 <section id="projects" class="projects">
     <div class="projects__header">
-        <h2 class="projects__title">Portfolio</h2>
-        <h3 class="projects__subtitle">Featured Projects</h3>
+        <p class="projects__eyebrow">Portfolio</p>
+        <h2 class="projects__heading">Featured Projects</h2>
         <p class="projects__text">Explore a selection of my work here - Interact with projects to see my skills in
             action.</p>
     </div>
     <ul class="projects__list">
         @for (project of featuredProjects; track project.projectName) {
         <li class="projects__item">
-            <button class="projects__card">
+            <button (click)="openDialog(project)" class="projects__card">
                 <div class="projects__name-wrapper">
                     <span class="projects__name">{{ project.projectName }}</span>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,4 +33,5 @@
         </li>
         }
     </ul>
+    <app-project-dialog></app-project-dialog>
 </section>

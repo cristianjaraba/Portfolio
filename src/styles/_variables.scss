@@ -17,11 +17,12 @@ $background-gradient-landing: linear-gradient(
   55.22deg,
   #1C1C1C 36.26%,
   #08463B 93.28%
-);$bg-dark: #1C1C1C;
+);
+$bg-dark: #1C1C1C;
 
 // Fonts sizes
 
-$font-size-h2: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
-$font-size-h3: clamp(2.25rem, 1.9rem + 1.5vw, 4rem);
-$font-size-h3-desktop: 2.25rem; // desde 769px
-$font-size-text: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
+$font-size-display: clamp(2.25rem, 1.9rem + 1.5vw, 4rem); // titulo grande de seccion
+$font-size-display-desktop: 2.25rem; // desde 1024px
+$font-size-subhead: clamp(1.125rem, 1rem + 0.5vw, 1.5rem); // eyebrow y subtitulos
+$font-size-body: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem);
