@@ -48,17 +48,12 @@
     }
 }
 
-// ==========================================================================
-// Responsive Design
-// ==========================================================================
-
 footer {
     @include mix.content-limit;
     @include mix.header-footer-padding-top;
     padding-bottom: clamp(10px, 4dvh, 40px);
 }
 
-// 0 - 480px
 @media (max-width: 480px) {
     .footer {
         flex-wrap: wrap;
@@ -91,7 +86,6 @@ footer {
     }
 }
 
-// 481 - 768px
 @media (min-width: 481px) and (max-width: 768px) {
     .footer {
         flex-wrap: wrap;
@@ -119,10 +113,8 @@ footer {
     }
 }
 
-// 769 - 1279px
 @media (min-width: 769px) {
     .footer {
-
 
         &__info {
             font-size: 18px;
@@ -150,7 +142,6 @@ footer {
     }
 }
 
-// + 1280px
 @media (min-width: 1280px) {
     .footer__copy-right {
         display: flex;

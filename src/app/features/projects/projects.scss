@@ -129,31 +129,23 @@
     }
 }
 
-// ========================================
-// Responsive Design (mobile first)
-// ========================================
-
-// 481px+
 @media (min-width: 481px) {
 
     .projects {
-
 
         &__text {
             max-width: 400px;
         }
 
-
     }
 
 }
 
-// 769px 
 @media (min-width: 769px) {
     .projects {
         padding-bottom: 0px;
         @include mix.flex-column;
-        // align-items: center;
+
         justify-content: center;
 
         &__header,
@@ -173,15 +165,11 @@
             &:hover {
                 background-color: #3DCFB64D;
 
-
             }
         }
 
-
     }
 }
-
-// 1024px+ /* desktop */
 
 @media (min-width: 1024px) {
     .projects {
@@ -237,7 +225,6 @@
 
 }
 
-// 1280px+ /* desktop big */
 @media (min-width: 1280px) {
     .projects {
 

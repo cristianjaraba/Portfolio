@@ -1,17 +1,13 @@
 @use '../../../../styles/variables' as vars;
 @use '../../../../styles/mixins' as mix;
 
-// ========================================
-// Base / mobile
-// ========================================
-
 .projects-dialog {
     position: fixed;
     inset: 0;
     margin: auto;
     height: 100dvh;
     width: 100dvw;
-    
+
     border: none;
     background: vars.$background-gradient-landing;
     padding: 15px;
@@ -148,8 +144,7 @@
     }
 
     &__next {
-        // Markup order puts it inside __media (right after the screenshot);
-        // on mobile it has to render last instead.
+
         order: 1;
         width: 100%;
         @include mix.flex-center;
@@ -188,23 +183,16 @@
     }
 }
 
-// ========================================
-// Responsive Design (mobile first)
-// ========================================
-
-// 481px+
 @media (min-width: 481px) {}
 .projects-dialog__screen-shot {
         max-width: 440px;
         margin: auto;
     }
-// 769px+
+
 @media (min-width: 769px) {
-    
 
 }
 
-// 1024px+ /* desktop: two columns, media on the right */
 @media (min-width: 1024px) {
 
     .projects-dialog {
@@ -261,13 +249,12 @@
         }
 
         &__index {
-        
+
         font-size: 128px;
     }
     }
 }
 
-// 1280px+ /* big desktop */
 @media (min-width: 1280px) {
 
     .projects-dialog{

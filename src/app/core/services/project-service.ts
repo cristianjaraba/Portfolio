@@ -1,9 +1,18 @@
 import { Service, signal } from '@angular/core';
 import { Project } from '../interfaces/project';
 
+/**
+ * Holds the portfolio projects and the one currently opened in the dialog.
+ *
+ * The project list is static, so it is built once in the constructor instead
+ * of being fetched.
+ */
 @Service()
 export class ProjectService {
+    /** Every project shown in the projects section, in display order. */
     projects: Project[];
+
+    /** Project opened in the project dialog, `null` while it is closed. */
     currentProject = signal<Project | null>(null);
 
     constructor() {
@@ -69,6 +78,11 @@ export class ProjectService {
         ];
     }
 
+    /**
+     * Returns every portfolio project.
+     *
+     * @returns The projects in display order.
+     */
     getProjects(){
         return this.projects;
     }

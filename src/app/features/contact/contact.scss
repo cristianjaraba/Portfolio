@@ -159,11 +159,6 @@
 }
 }
 
-// ========================================
-// Responsive Design (mobile first)
-// ========================================
-
-// 481px+
 @media (min-width: 481px) {
     .contact {
 
@@ -173,7 +168,6 @@
     }
 }
 
-// 769px+
 @media (min-width: 769px) {
     .contact {
 
@@ -184,8 +178,6 @@
         }
     }
 }
-
-// 1024px+ /* desktop */
 
 @media (min-width: 1024px) {
 .contact {
@@ -198,7 +190,6 @@
     }
 }
 
-// 1280px+ /* desktop big */
 @media (min-width: 1280px) {
     .contact {
 

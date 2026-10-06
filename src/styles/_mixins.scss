@@ -1,9 +1,5 @@
 @use './variables' as vars;
 
-// ==========================================================================
-// Flex helpers
-// ==========================================================================
-
 @mixin flex-center {
     display: flex;
     align-items: center;
@@ -26,10 +22,6 @@
     text-decoration: none;
     color: $color;
 }
-
-// ==========================================================================
-// Language button
-// ==========================================================================
 
 @mixin lang-btn-base {
     height: 30px;
@@ -55,11 +47,6 @@
         cursor: auto;
     }
 }
-
-// ==========================================================================
-// Navigation Links
-// ==========================================================================
-
 
 @mixin navigation-links($inset, $point_size, $axis: x, $hover-color: false) {
     a {
@@ -105,13 +92,8 @@
     }
 }
 
-// ==========================================================================
-// Marquee
-// ==========================================================================
-
-
 @mixin marquee-button($width: 170px, $color: white, $hover-color: vars.$primary-green) {
-    // & = selector 
+
     $track: #{&}-track;
 
     @keyframes marquee-content {
@@ -181,10 +163,6 @@
         animation: none;
     }
 }
-
-// ==========================================================================
-// Stripes 
-// ==========================================================================
 
 @mixin stripes($angle: 45deg, $thickness: 1px, $gap: 14px, $color: vars.$primary-green) {
   background: repeating-linear-gradient(

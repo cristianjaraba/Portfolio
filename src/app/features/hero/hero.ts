@@ -1,6 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
+/**
+ * Landing hero with the name, the job title and the social media links.
+ *
+ * The social media icons are inlined as SVG markup so they can be styled by
+ * the component stylesheet, which is why they are sanitized explicitly.
+ */
 @Component({
   imports: [],
   selector: 'app-hero',
@@ -10,6 +16,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class Hero {
   private sanitizer = inject(DomSanitizer);
 
+  /** Social media links of the hero, each with its inline SVG icon. */
   socialMediaItems: { label: string; href: string; icon: SafeHtml }[];
   constructor() {
 

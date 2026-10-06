@@ -6,6 +6,7 @@ import { Contact } from '../../features/contact/contact';
 import { Hero } from '../../features/hero/hero';
 import { Header } from '../../layout/header/header';
 
+/** Home page composing the landing and every section of the portfolio. */
 @Component({
   imports: [Header,
     Hero,

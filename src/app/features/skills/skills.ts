@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+/** Skills section rendering one badge per technology. */
 @Component({
   imports: [],
   selector: 'app-skills',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class Skills {
 
+  /** Skill names; each one maps to an icon of the same name in the assets. */
   icons = ['HTML',
     'CSS',
     'JavaScript',

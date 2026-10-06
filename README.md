@@ -1,59 +1,90 @@
-# JarabaPortfolio
+# Jaraba Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Personal portfolio of Cristian Jaraba, built as a single page Angular
+application with a separate legal notice page.
 
-## Development server
+## Tech stack
 
-To start a local development server, run:
+- Angular 22 (standalone components, signals, reactive forms)
+- TypeScript 6
+- SCSS with shared variables and mixins
+- Vitest for unit tests
 
-```bash
-ng serve
-```
+## Requirements
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Node.js 20.19+, 22.12+ or 24+
+- npm 11+
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Getting started
 
 ```bash
-ng generate --help
+npm install
+npm start
 ```
 
-## Building
+The dev server opens `http://localhost:4200/` and reloads on every change.
 
-To build the project run:
+## Scripts
+
+| Script | Description |
+| --- | --- |
+| `npm start` | Start the dev server and open the browser |
+| `npm run build` | Production build into `dist/` |
+| `npm run watch` | Development build that rebuilds on change |
+| `npm test` | Run the unit tests once |
+
+## Routes
+
+| Path | Page | Content |
+| --- | --- | --- |
+| `/` | `Home` | Hero, about me, skills, projects and contact |
+| `/imprint` | `Imprint` | Legal notice, linked from the footer and the contact form |
+
+## Project structure
+
+```
+src/
+  app/
+    core/          Interfaces and services shared across features
+    features/      Sections of the portfolio (hero, about me, skills, ...)
+    layout/        Header and footer
+    pages/         Routed pages composing the sections
+    shared/        Reusable presentational components
+  assets/          Icons and screenshots
+  styles/          Global stylesheet, variables, mixins and fonts
+```
+
+The root component only renders the router outlet and the footer. Each page
+composes the feature sections it needs, so a section can be reused on more
+than one page.
+
+Project data lives in `ProjectService`. The projects section and the project
+dialog share the selected project through a signal on that service, which
+lets the dialog cycle through the list on its own.
+
+## Code conventions
+
+- No source file exceeds 300 lines; larger stylesheets are split into
+  partials, as in `hero.scss` and `_hero-base.scss`.
+- TypeScript is documented with JSDoc in English. Templates and stylesheets
+  carry no comments; names and structure carry the intent instead.
+- Stylesheets follow BEM style class names and are mobile first, with the
+  media queries grouped at the end of the file.
+- Design tokens are defined in `src/styles/_variables.scss` and reusable
+  blocks in `src/styles/_mixins.scss`.
+
+## Tests
 
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Every component has a smoke test asserting it is created. Components using
+`RouterLink` get the router providers through `provideRouter([])`.
 
-## Running unit tests
+## Contact form
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The contact form is validated with Angular reactive forms. Instead of extra
+error labels, each field shows its validation hint inside its own
+placeholder. Submitting currently resets the form; sending the message to a
+backend is not wired up yet.

@@ -158,11 +158,6 @@
     }
 }
 
-// ========================================
-// Responsive Design (mobile first)
-// ========================================
-
-// 481px+
 @media (min-width: 481px) {
     .skills-section__container--icons {
         grid-template-columns: repeat(4, max-content);
@@ -186,10 +181,8 @@
     }
 }
 
-    
 }
 
-// 769px+
 @media (min-width: 769px) {
 
     .skill-wrapper {
@@ -200,11 +193,8 @@
     }
 
 }
-    
 
 }
-
-// 1044px+ /* desktop */
 
 @media (min-width: 1024px) {
     .skills-section {
@@ -246,7 +236,7 @@
         height: auto;
     }
 }
-// 1280px+ /* big desktop */
+
 @media (min-width: 1280px) {
     .skills-section {
         gap: 90px;

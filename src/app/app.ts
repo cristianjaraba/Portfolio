@@ -1,8 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './layout/footer/footer';
 
-
+/**
+ * Root shell of the application.
+ *
+ * Renders the routed page through the router outlet and keeps the footer
+ * visible on every route.
+ */
 @Component({
   imports: [RouterOutlet,
     Footer
@@ -11,6 +16,4 @@ import { Footer } from './layout/footer/footer';
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('jaraba-portfolio');
-}
+export class App {}
