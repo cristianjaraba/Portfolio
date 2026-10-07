@@ -37,6 +37,8 @@
                 "output": "assets"
               }
             ],
+            "server": "src/main.server.ts",
+            "outputMode": "static",
             "styles": [
               "src/styles/styles.scss"
             ]
