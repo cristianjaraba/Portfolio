@@ -1,5 +1,5 @@
 import { Component, DOCUMENT, effect, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { isActive, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Footer } from './layout/footer/footer';
 
@@ -10,6 +10,9 @@ import { Footer } from './layout/footer/footer';
  * on every route and holds the document in the language being displayed.
  */
 @Component({
+  host: {
+    '[class.app--legal]': 'isLegalPage()'
+  },
   imports: [RouterOutlet,
     Footer
   ],
@@ -21,6 +24,15 @@ export class App {
 
   /** Document whose `lang` attribute follows the language switch. */
   private document = inject(DOCUMENT);
+
+  /**
+   * True while the legal notice is the routed page.
+   *
+   * The landing gradient has to span the whole legal notice, and the footer
+   * lives in this shell rather than in the page, so the background is painted
+   * here instead of inside the page component.
+   */
+  protected isLegalPage = isActive('/imprint', inject(Router));
 
   /** Translation service the active language is read from. */
   private translate = inject(TranslateService);

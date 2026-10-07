@@ -31,8 +31,11 @@
 
         span {
             font-family: 'Fira Code';
-            font-size: 16px;
-            width: min-content;
+            font-size: clamp(0.8125rem, 0.219rem + 2.97vw, 1rem);
+            max-width: 100%;
+            text-align: center;
+            overflow-wrap: anywhere;
+            hyphens: auto;
         }
     }
 
@@ -41,8 +44,7 @@
 
         &--icons {
             display: grid;
-            grid-template-columns: repeat(3, max-content);
-            justify-content: space-between;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             align-content: start;
             gap: 10px;
             width: 100%;
@@ -71,7 +73,7 @@
                 font-weight: bold;
                 text-align: center;
                 color: vars.$primary-green;
-                font-size: vars.$font-size-display;
+                font-size: min(#{vars.$font-size-display}, 9.2vw);
                 margin-bottom: 2rem;
             }
 
@@ -160,7 +162,7 @@
 
 @media (min-width: 481px) {
     .skills-section__container--icons {
-        grid-template-columns: repeat(4, max-content);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
 
         &__container {
             &--icons {

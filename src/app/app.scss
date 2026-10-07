@@ -6,3 +6,10 @@
     flex-direction: column;
     min-height: 100dvh;
 }
+
+// One gradient across the whole legal notice, header and footer included.
+// Painting it on the shell rather than on each block keeps it continuous:
+// per block it would restart and leave a seam at every boundary.
+:host(.app--legal) {
+    background: vars.$background-gradient-landing;
+}

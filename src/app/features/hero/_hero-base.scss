@@ -1,6 +1,10 @@
 @use '../../../styles/variables' as vars;
 @use '../../../styles/mixins' as mix;
 
+// Spacing of the ticker items. The separator dot is placed at half of it, so
+// both have to come from the same place to stay centred in the gap.
+$ticker-gap: 50px;
+
 @keyframes animateArrow {
 
     0%,
@@ -47,13 +51,35 @@
         @include mix.flex-center;
         flex-shrink: 0;
         width: max-content;
-        gap: 50px;
-        padding-right: 50px;
+        gap: $ticker-gap;
+        padding-right: $ticker-gap;
         white-space: nowrap;
         color: vars.$primary-green;
         font-family: 'Karla';
         font-size: 32px;
         animation: hero-section-marquee-content 10s linear infinite;
+    }
+
+    // Every item carries its own separator, the last one of a block included:
+    // the next block starts one gap later, so the dots keep an even rhythm
+    // across the seam instead of leaving a double space there.
+    &__item {
+        position: relative;
+
+        // Centred in the gap rather than anchored to the text, so it reads as
+        // a separator between items and not as punctuation on one of them.
+        // Sized in em so it shrinks with the font on the narrow breakpoints.
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: calc(100% + #{$ticker-gap * 0.5});
+            width: 0.25em;
+            height: 0.25em;
+            border-radius: 50%;
+            background-color: vars.$primary-green;
+            transform: translate(-50%, -50%);
+        }
     }
 
 }

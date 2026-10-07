@@ -11,6 +11,8 @@
     @include mix.flex-column;
     gap: 1rem;
     padding-block: 40px 60px;
+    // The gradient comes from the app shell, so it also covers the header and
+    // the footer as one continuous background.
 
     &__title {
         font-size: vars.$font-size-display;

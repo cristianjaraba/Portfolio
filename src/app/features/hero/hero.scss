@@ -165,6 +165,31 @@
     }
 }
 
+@media (max-width: 779px) {
+    .hero {
+
+        // The central container is absolutely positioned against the host, so
+        // it does not inherit the content gutter: the row carries its own, and
+        // the buttons shrink with it to keep a margin on the narrowest screens.
+        &__links-container {
+            width: 100%;
+            padding-inline: clamp(25px, 10vw, 40px);
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: nowrap;
+        }
+
+        // Both buttons split the same row, so they end up exactly the same
+        // width whatever the translated label is, and the pair stays centred.
+        &__marquee {
+            flex: 1 1 0;
+            width: auto;
+            min-width: 0;
+            max-width: 170px;
+        }
+    }
+}
+
 @media (min-width: 769px) {
     .hero {
 

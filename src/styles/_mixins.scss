@@ -1,30 +1,45 @@
 @use './variables' as vars;
 
+/// Lays a box out as a row with its items centred on the cross axis.
 @mixin flex-center {
     display: flex;
     align-items: center;
 }
 
+/// Lays a box out as a column.
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
+/// Top padding shared by the header and the footer, so both keep the same
+/// distance to the edge of the viewport while it scales with its height.
 @mixin header-footer-padding-top {
     padding-top: clamp(10px, 4vh, 40px);
 }
 
+/// Caps the content at the layout width and centres it, falling back to a
+/// gutter on viewports narrower than that.
+///
+/// @param {Length} $left-right [25px] Gutter kept on the narrow viewports.
 @mixin content-limit($left-right: 25px){
     padding-inline: max(calc(50% - 720px), $left-right);
 }
 
+/// Strips the browser styling off a link and paints it in one colour.
+///
+/// @param {Color} $color Colour the link text is painted in.
 @mixin remove-link-style($color){
     text-decoration: none;
     color: $color;
 }
 
+/// Styling shared by the buttons of the language switch, including the pill
+/// of the `lang-btn--activated` state.
 @mixin lang-btn-base {
-    height: 30px;
+    // Fills the container's inner box instead of matching its outer height, so
+    // the active pill stays inside the border rather than straddling it.
+    height: 100%;
     border-radius: 20px;
     border: none;
     background-color: transparent;
@@ -48,6 +63,14 @@
     }
 }
 
+/// Styles a list of navigation links, each one revealing its `.point` marker
+/// on hover.
+///
+/// @param {List} $inset Inset placing the marker relative to its link.
+/// @param {Length} $point_size Diameter of the marker.
+/// @param {String} $axis [x] Axis the marker is centred on, `x` or `y`.
+/// @param {Color | Bool} $hover-color [false] Colour the link takes on hover;
+///   `false` leaves the link colour untouched.
 @mixin navigation-links($inset, $point_size, $axis: x, $hover-color: false) {
     a {
         text-decoration: none;
@@ -92,6 +115,14 @@
     }
 }
 
+/// Outlined pill button whose label scrolls past on hover.
+///
+/// Expects a `-track` child next to the element the mixin is applied to, that
+/// is, `.cta` pairs with `.cta-track`, since the label is the part that moves.
+///
+/// @param {Length} $width [170px] Minimum width of the button.
+/// @param {Color} $color [white] Colour of the border and the label at rest.
+/// @param {Color} $hover-color [vars.$primary-green] Colour both take on hover.
 @mixin marquee-button($width: 170px, $color: white, $hover-color: vars.$primary-green) {
 
     $track: #{&}-track;
@@ -157,6 +188,14 @@
     }
 }
 
+/// Touch variant of {marquee-button}: the label scrolls on its own, slower,
+/// since there is no hover to start it.
+///
+/// Has to be included after the base mixin on the same element, whose `-track`
+/// child it also expects.
+///
+/// @param {Length} $width Minimum width of the button.
+/// @param {Color} $color [vars.$primary-green] Colour of the border and label.
 @mixin marquee-button-mobile($width, $color: vars.$primary-green) {
     $track: #{&}-track;
 
@@ -170,11 +209,22 @@
         animation: marquee-content 4s linear infinite;
     }
 
-    &:hover #{$track} {
-        animation: none;
+    // Repeats the base mixin's `:hover:not(:disabled)` selector so both rules
+    // weigh the same and this one, declared later, wins. Otherwise the desktop
+    // 2s hover animation stays in charge and the label suddenly speeds up when
+    // the pointer lands on the button. Re-stating the identical shorthand keeps
+    // the running animation going instead of restarting it.
+    &:hover:not(:disabled) #{$track} {
+        animation: marquee-content 4s linear infinite;
     }
 }
 
+/// Paints a box with evenly spaced diagonal stripes.
+///
+/// @param {Angle} $angle [45deg] Direction the stripes run in.
+/// @param {Length} $thickness [1px] Width of a single stripe.
+/// @param {Length} $gap [14px] Space left between two stripes.
+/// @param {Color} $color [vars.$primary-green] Colour of the stripes.
 @mixin stripes($angle: 45deg, $thickness: 1px, $gap: 14px, $color: vars.$primary-green) {
   background: repeating-linear-gradient(
     $angle,
