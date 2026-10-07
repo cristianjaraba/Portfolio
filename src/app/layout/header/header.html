@@ -31,23 +31,25 @@
             </svg>
         </a>
     </div>
-    <dialog closedby="any" #navigation_dialog>
-        <nav>
-            <ul>
-                @for (item of navItems; track item.fragment) {
-                <li (click)="closeDialog()">
-                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.labelKey | translate }}</a>
-                </li>
+    <dialog closedby="any" #navigation_dialog (click)="onDialogClick($event, navigation_dialog)">
+        <div class="dialog__content">
+            <nav>
+                <ul>
+                    @for (item of navItems; track item.fragment) {
+                    <li (click)="closeDialog()">
+                        <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.labelKey | translate }}</a>
+                    </li>
+                    }
+                </ul>
+            </nav>
+            <div class="lang-btn-container">
+                @for (lang of languages; track lang.code) {
+                <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang()"
+                    [disabled]="lang.code === activeLang()" (click)="setLanguage(lang.code)">
+                    {{ lang.label }}
+                </button>
                 }
-            </ul>
-        </nav>
-        <div class="lang-btn-container">
-            @for (lang of languages; track lang.code) {
-            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang()"
-                [disabled]="lang.code === activeLang()" (click)="setLanguage(lang.code)">
-                {{ lang.label }}
-            </button>
-            }
+            </div>
         </div>
     </dialog>
 

@@ -51,4 +51,18 @@ export class ProjectDialog {
     this.dialog().nativeElement.close();
   }
 
+  /**
+   * Closes the dialog when the backdrop is clicked.
+   *
+   * Fallback for browsers without `closedby="any"` support (Safari/WebKit).
+   * The content wrapper fills the dialog, so only a backdrop click has the
+   * dialog itself as target.
+   *
+   * @param event Click event received by the dialog.
+   * @param dialog Dialog element the click listener is bound to.
+   */
+  onDialogClick(event: MouseEvent, dialog: HTMLDialogElement) {
+    if (event.target === dialog) dialog.close();
+  }
+
 }

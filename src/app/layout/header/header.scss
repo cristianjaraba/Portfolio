@@ -89,16 +89,21 @@ dialog {
   height: 250px;
   width: 240px;
   background: vars.$background-gradient-dialog;
-  @include mix.flex-column;
-  gap: 25px;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 0;
   border-radius: 20px;
   border: 1px solid vars.$primary-green;
   position: fixed;
   margin: 0;
   inset: auto;
+
+  .dialog__content {
+    @include mix.flex-column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 20px;
+  }
 
   ul {
     @include mix.flex-column;
