@@ -1,9 +1,8 @@
 <section id="projects" class="projects">
     <div class="projects__header">
-        <p class="projects__eyebrow">Portfolio</p>
-        <h2 class="projects__heading">Featured Projects</h2>
-        <p class="projects__text">Explore a selection of my work here - Interact with projects to see my skills in
-            action.</p>
+        <p class="projects__eyebrow">{{ 'PROJECTS.EYEBROW' | translate }}</p>
+        <h2 class="projects__heading">{{ 'PROJECTS.HEADING' | translate }}</h2>
+        <p class="projects__text">{{ 'PROJECTS.INTRO' | translate }}</p>
     </div>
     <ul class="projects__list">
         @for (project of featuredProjects; track project.projectName) {
@@ -24,8 +23,9 @@
                     @if (!$last) { <span class="projects__separator"></span> }
                     }
                 </span>
-                <div class="projects__screenshot-container projects__screenshot-container--{{ project.projectName.toLowerCase().replaceAll(' ', '-') }}"
-                    [style.background-image]="'url(' + project.screenShot + ')'">
+                <div class="projects__screenshot-container projects__screenshot-container--{{ project.projectName.toLowerCase().replaceAll(' ', '-') }}">
+                    <img class="projects__screenshot" [src]="project.screenShot"
+                        [alt]="project.projectName" loading="lazy" />
                     <div class="projects__screenshot-shadow"></div>
                 </div>
             </button>

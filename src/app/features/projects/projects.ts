@@ -1,4 +1,5 @@
 import { Component, inject, viewChild } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ProjectService } from '../../core/services/project-service';
 import { Project } from '../../core/interfaces/project';
 import { ProjectDialog } from './project-dialog/project-dialog';
@@ -10,13 +11,14 @@ import { ProjectDialog } from './project-dialog/project-dialog';
  * project dialog.
  */
 @Component({
-  imports: [ProjectDialog],
+  imports: [ProjectDialog, TranslatePipe],
   selector: 'app-projects',
   styleUrl: './projects.scss',
   templateUrl: './projects.html',
 })
 export class Projects {
 
+  /** Source of the project list and of the project the dialog shows. */
   projectService = inject(ProjectService);
 
   /** Projects rendered in the section. */
@@ -45,6 +47,7 @@ export class Projects {
   this.projectService.currentProject.set(project);
 }
 
+  /** Loads the projects to render from the project service. */
   constructor() {
     this.featuredProjects = this.projectService.getProjects();
   }

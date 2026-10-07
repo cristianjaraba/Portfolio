@@ -1,0 +1,185 @@
+{
+  "COMMON": {
+    "HOME": "Home"
+  },
+  "NAV": {
+    "ABOUT": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects"
+  },
+  "HERO": {
+    "ROLE": "Full Stack Developer",
+    "CHECK_WORK": "Check my work",
+    "CONTACT": "Contact me",
+    "TICKER": {
+      "OPEN_TO_WORK": "Open to work",
+      "REMOTE": "Available for remote work",
+      "ROLE": "Full Stack Developer",
+      "LOCATION": "Based in Berlin"
+    }
+  },
+  "ABOUT": {
+    "EYEBROW": "Who I am",
+    "HEADING": "About me",
+    "INTRO": "Hey, I'm Cristian. I build web applications end to end, from the interface people click on down to the data that feeds it. What keeps me coming back to code is the moment an idea finally behaves the way I pictured it, and the next idea that opens up.",
+    "LOCATION": "Based in Berlin, open to remote work across Europe and happy to relocate for the right team.",
+    "CURIOSITY": "Curious by default. Angular and TypeScript are where I feel at home, and React and Vue are next on my list. Picking up a new stack is part of the job, not an obstacle.",
+    "PROBLEM_SOLVING": "I break a problem down until every piece is small enough to reason about, then look for the simplest solution that still holds up. Analytical thinking, persistence and asking the right questions early keep the surprises small."
+  },
+  "SKILLS": {
+    "EYEBROW": "Technologies",
+    "HEADING": "Skill Set",
+    "INTRO": "I work across the whole front end: semantic HTML, modern CSS, TypeScript and Angular, wired up to REST APIs and real-time data. I care about accessible markup, clear component boundaries and code the next developer can read. Web development moves fast, so learning is part of my routine rather than something I fit in afterwards.",
+    "QUESTION": "You need",
+    "QUESTION_HIGHLIGHT": "another skill?",
+    "INVITE": "Get in touch. I enjoy working past what I already know, and I pick up new tools quickly.",
+    "CTA": "Let's talk",
+    "LEARNING": "Next on my learning list",
+    "ITEMS": {
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "JAVASCRIPT": "JavaScript",
+      "REST_API": "REST API",
+      "TYPESCRIPT": "TypeScript",
+      "ANGULAR": "Angular",
+      "GIT": "Git",
+      "MATERIAL_DESIGN": "Material Design",
+      "SCRUM": "Scrum",
+      "GROWTH_MINDSET": "Growth mindset"
+    }
+  },
+  "PROJECTS": {
+    "EYEBROW": "Portfolio",
+    "HEADING": "Featured Projects",
+    "INTRO": "A selection of the things I have built. Open any project to see what it does, which stack it runs on and where the code lives.",
+    "ITEMS": {
+      "JOIN": "Task manager built on the Kanban principle. Create tasks, move them between columns by drag and drop and assign them to categories and team members.",
+      "EL_POLLO_LOCO": "Jump and run game built on an object oriented architecture. Help Pepe collect coins and tabasco bottles to take on the crazy hen.",
+      "DABUBBLE": "Slack inspired team messenger with real time chat, threaded answers and channels, so a whole team keeps its conversations in one place."
+    },
+    "DIALOG": {
+      "NEXT": "Next project",
+      "ABOUT": "What is this project about?",
+      "GITHUB": "GitHub",
+      "LIVE_DEMO": "Live Demo"
+    }
+  },
+  "CONTACT": {
+    "EYEBROW": "Contact me",
+    "HEADING_1": "Let's work",
+    "HEADING_2": "together",
+    "SUBHEAD": "Got a problem to solve?",
+    "TEXT": "I am looking for a team where I can own real features and keep learning from people who are further along than me. Tell me what you are building and what is in the way, and I will tell you honestly how I can help.",
+    "CTA": "Need a Full Stack developer?",
+    "CTA_HIGHLIGHT": "Let's talk!",
+    "LABEL": {
+      "NAME": "What's your name?",
+      "EMAIL": "What's your email?",
+      "MESSAGE": "How can I help you?"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Your name goes here",
+      "EMAIL": "youremail@email.com",
+      "MESSAGE": "Hello Cristian, I am interested in..."
+    },
+    "HINT": {
+      "NAME": "Oops! Your name is missing",
+      "EMAIL_REQUIRED": "Oops! Your email is required",
+      "EMAIL_INVALID": "Oops! This email does not look valid",
+      "MESSAGE": "Oops! Tell me what you need"
+    },
+    "PRIVACY_BEFORE": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_AFTER": "and agree to the processing of my data as outlined.",
+    "PRIVACY_ERROR": "Please accept the privacy policy",
+    "SUBMIT": "Say Hello ;)"
+  },
+  "FOOTER": {
+    "ROLE": "Full Stack Developer",
+    "LOCATION": "Berlin, Germany",
+    "LINKS": {
+      "GITHUB": "GitHub",
+      "LINKEDIN": "LinkedIn",
+      "EMAIL": "Email",
+      "LEGAL": "Legal Notice"
+    }
+  },
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "PROVIDER_HEADING": "Information pursuant to § 5 DDG",
+    "ADDRESS": "Cristian Jaraba Castilla<br>Friedrichstraße 11<br>10969 Berlin<br>Germany",
+    "PRIVATE_NOTE": "This is a private portfolio website. It is not operated commercially, which is why it carries neither a commercial register entry nor a VAT identification number.",
+    "CONTACT_HEADING": "Contact",
+    "CONTACT_EMAIL": "Email:",
+    "RESPONSIBLE_HEADING": "Responsible for the content pursuant to § 18 (2) MStV",
+    "RESPONSIBLE_BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Germany",
+    "TERMS": {
+      "HEADING": "Acceptance of terms",
+      "BODY_1": "By accessing and using",
+      "BODY_2": "(Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. I may update or change these terms and conditions from time to time without notice."
+    },
+    "SCOPE": {
+      "HEADING": "Scope and ownership of the product",
+      "ORIGIN_1": "has been developed as a student project in a web development bootcamp at the",
+      "ORIGIN_2": "It has an educational purpose and is not intended for extensive personal & business usage. As such, I cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+      "DESIGN_1": "The design of",
+      "DESIGN_2": "is owned by the",
+      "DESIGN_3": "Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited."
+    },
+    "RIGHTS": {
+      "HEADING": "Proprietary rights",
+      "BODY_1": "All proprietary rights in",
+      "BODY_2": "are mine, including any associated copyrighted material, trademarks, and other proprietary information, with the exception of the design owned by"
+    },
+    "USE": {
+      "HEADING": "Use of the product",
+      "BODY_1": "is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of",
+      "BODY_2": "for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of"
+    },
+    "DISCLAIMER": {
+      "HEADING": "Disclaimer of warranties and limitation of liability",
+      "BODY_1": "is provided “as is” without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will I or the",
+      "BODY_2": "be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if I have been advised of the possibility of such damages, arising out of or in connection with the use or performance of"
+    },
+    "INDEMNITY": {
+      "HEADING": "Indemnity",
+      "BODY_1": "You agree to indemnify, defend and hold harmless me, the",
+      "BODY_2": "and its affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of",
+      "BODY_3": "and/or your breach of this Legal Notice."
+    },
+    "LINKS": {
+      "HEADING": "Liability for links",
+      "BODY": "This website links to external sites whose content I do not control, so responsibility for that content lies with its respective provider. No legal violation was recognisable on the linked pages when the links were set. Monitoring them permanently without concrete evidence of an infringement is not reasonable, and any link is removed as soon as I become aware of one."
+    },
+    "PRIVACY": {
+      "HEADING": "Privacy policy",
+      "INTRO": "This section explains which personal data this website processes, on which legal basis, and which rights you have under the General Data Protection Regulation (GDPR).",
+      "CONTROLLER": {
+        "HEADING": "Controller",
+        "BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Germany. Email:"
+      },
+      "LOGS": {
+        "HEADING": "Server log files",
+        "BODY": "When you open this website, the hosting provider automatically records the data your browser transmits: IP address, date and time of the request, the resource requested, the referring page, and your browser and operating system. That data is processed to deliver the site and keep it secure, on the basis of a legitimate interest under Art. 6 (1) (f) GDPR, and it is not merged with any other data."
+      },
+      "FORM": {
+        "HEADING": "Contact form and email",
+        "BODY": "The contact form asks for your name, your email address and your message. That data is used solely to answer your enquiry, on the basis of Art. 6 (1) (a) and (f) GDPR, and is deleted once the enquiry is settled and no retention obligation applies. You give your consent through the checkbox in the form and may withdraw it at any time by email, with effect for the future. The same applies if you write to me directly."
+      },
+      "COOKIES": {
+        "HEADING": "Cookies, analytics and fonts",
+        "BODY": "This website sets no cookies, shows no advertising and uses no analytics or tracking services. Fonts and icons are served from this site itself, so no request reaches a third party provider. The language you select in the header is applied in your browser only and is not stored."
+      },
+      "EXTERNAL": {
+        "HEADING": "External links",
+        "BODY": "The links to GitHub, LinkedIn and the Developer Akademie lead to third party websites. Once you follow one, the privacy policy of that provider applies and I have no influence over the data it collects."
+      },
+      "RIGHTS": {
+        "HEADING": "Your rights",
+        "BODY": "You have the right to access your personal data and to have it rectified, erased or its processing restricted, the right to data portability, and the right to object to processing based on a legitimate interest. To exercise any of these rights, write to the address above. You may also lodge a complaint with a supervisory authority; the competent one here is the Berlin Commissioner for Data Protection and Freedom of Information."
+      }
+    },
+    "QUESTIONS": "For any questions or notices, please contact me at",
+    "DATE": "Date: October 07, 2026"
+  }
+}

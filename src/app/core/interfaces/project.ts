@@ -4,8 +4,8 @@ import { Technology } from "./technology";
 export interface Project {
     /** Display name of the project. */
     projectName: string,
-    /** Short summary shown on the card and in the dialog. */
-    description: string,
+    /** Translation key of the summary shown in the dialog. */
+    descriptionKey: string,
     /** Stack the project was built with. */
     technologies: Technology[],
     /** Public repository URL. */

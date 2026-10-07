@@ -1,0 +1,185 @@
+{
+  "COMMON": {
+    "HOME": "Startseite"
+  },
+  "NAV": {
+    "ABOUT": "Über mich",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projekte"
+  },
+  "HERO": {
+    "ROLE": "Full Stack Developer",
+    "CHECK_WORK": "Meine Arbeit ansehen",
+    "CONTACT": "Kontakt aufnehmen",
+    "TICKER": {
+      "OPEN_TO_WORK": "Offen für neue Aufgaben",
+      "REMOTE": "Remote verfügbar",
+      "ROLE": "Full Stack Developer",
+      "LOCATION": "Ansässig in Berlin"
+    }
+  },
+  "ABOUT": {
+    "EYEBROW": "Wer ich bin",
+    "HEADING": "Über mich",
+    "INTRO": "Hey, ich bin Cristian. Ich baue Webanwendungen von Anfang bis Ende, von der Oberfläche, die man anklickt, bis zu den Daten, die sie füttern. Was mich immer wieder zum Code zurückbringt, ist der Moment, in dem eine Idee endlich so funktioniert, wie ich sie mir vorgestellt habe, und die nächste Idee, die sich daraus ergibt.",
+    "LOCATION": "Ansässig in Berlin, offen für Remote-Arbeit in ganz Europa und bereit umzuziehen, wenn das Team passt.",
+    "CURIOSITY": "Neugierig von Grund auf. Angular und TypeScript sind mein Zuhause, React und Vue stehen als Nächstes auf der Liste. Einen neuen Stack zu lernen gehört zum Job und ist kein Hindernis.",
+    "PROBLEM_SOLVING": "Ich zerlege ein Problem, bis jeder Teil klein genug ist, um ihn zu durchdenken, und suche dann die einfachste Lösung, die trotzdem trägt. Analytisches Denken, Ausdauer und früh die richtigen Fragen zu stellen halten die Überraschungen klein."
+  },
+  "SKILLS": {
+    "EYEBROW": "Technologien",
+    "HEADING": "Skill Set",
+    "INTRO": "Ich arbeite über das gesamte Frontend: semantisches HTML, modernes CSS, TypeScript und Angular, angebunden an REST-APIs und Echtzeitdaten. Mir liegen zugängliches Markup, klare Komponentengrenzen und Code am Herzen, den die nächste Person lesen kann. Webentwicklung bewegt sich schnell, deshalb gehört Lernen zu meinem Alltag und ist nichts, was ich nebenbei einschiebe.",
+    "QUESTION": "Du brauchst",
+    "QUESTION_HIGHLIGHT": "noch einen Skill?",
+    "INVITE": "Melde dich. Ich arbeite gern über das hinaus, was ich schon kenne, und lerne neue Werkzeuge schnell.",
+    "CTA": "Sprechen wir",
+    "LEARNING": "Als Nächstes auf meiner Lernliste",
+    "ITEMS": {
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "JAVASCRIPT": "JavaScript",
+      "REST_API": "REST-API",
+      "TYPESCRIPT": "TypeScript",
+      "ANGULAR": "Angular",
+      "GIT": "Git",
+      "MATERIAL_DESIGN": "Material Design",
+      "SCRUM": "Scrum",
+      "GROWTH_MINDSET": "Lernbereitschaft"
+    }
+  },
+  "PROJECTS": {
+    "EYEBROW": "Portfolio",
+    "HEADING": "Ausgewählte Projekte",
+    "INTRO": "Eine Auswahl der Dinge, die ich gebaut habe. Öffne ein Projekt, um zu sehen, was es macht, auf welchem Stack es läuft und wo der Code liegt.",
+    "ITEMS": {
+      "JOIN": "Aufgabenverwaltung nach dem Kanban-Prinzip. Aufgaben anlegen, per Drag and Drop zwischen Spalten verschieben und Kategorien sowie Teammitgliedern zuweisen.",
+      "EL_POLLO_LOCO": "Jump-and-Run-Spiel auf Basis einer objektorientierten Architektur. Hilf Pepe, Münzen und Tabascoflaschen zu sammeln, um es mit der verrückten Henne aufzunehmen.",
+      "DABUBBLE": "Von Slack inspirierter Team-Messenger mit Echtzeit-Chat, Antwort-Threads und Kanälen, damit ein ganzes Team seine Gespräche an einem Ort behält."
+    },
+    "DIALOG": {
+      "NEXT": "Nächstes Projekt",
+      "ABOUT": "Worum geht es in diesem Projekt?",
+      "GITHUB": "GitHub",
+      "LIVE_DEMO": "Live-Demo"
+    }
+  },
+  "CONTACT": {
+    "EYEBROW": "Kontakt",
+    "HEADING_1": "Arbeiten wir",
+    "HEADING_2": "zusammen",
+    "SUBHEAD": "Du hast ein Problem zu lösen?",
+    "TEXT": "Ich suche ein Team, in dem ich echte Features verantworten und von Menschen lernen kann, die weiter sind als ich. Erzähl mir, was du baust und was im Weg steht, und ich sage dir offen, wie ich helfen kann.",
+    "CTA": "Du brauchst einen Full Stack Developer?",
+    "CTA_HIGHLIGHT": "Sprechen wir!",
+    "LABEL": {
+      "NAME": "Wie heißt du?",
+      "EMAIL": "Wie lautet deine E-Mail?",
+      "MESSAGE": "Wie kann ich dir helfen?"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Hier kommt dein Name hin",
+      "EMAIL": "deinemail@email.com",
+      "MESSAGE": "Hallo Cristian, ich interessiere mich für ..."
+    },
+    "HINT": {
+      "NAME": "Hoppla! Dein Name fehlt",
+      "EMAIL_REQUIRED": "Hoppla! Deine E-Mail ist erforderlich",
+      "EMAIL_INVALID": "Hoppla! Diese E-Mail sieht nicht gültig aus",
+      "MESSAGE": "Hoppla! Sag mir, was du brauchst"
+    },
+    "PRIVACY_BEFORE": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_AFTER": "gelesen und bin mit der dort beschriebenen Verarbeitung meiner Daten einverstanden.",
+    "PRIVACY_ERROR": "Bitte akzeptiere die Datenschutzerklärung",
+    "SUBMIT": "Sag Hallo ;)"
+  },
+  "FOOTER": {
+    "ROLE": "Full Stack Developer",
+    "LOCATION": "Berlin, Deutschland",
+    "LINKS": {
+      "GITHUB": "GitHub",
+      "LINKEDIN": "LinkedIn",
+      "EMAIL": "E-Mail",
+      "LEGAL": "Impressum"
+    }
+  },
+  "IMPRINT": {
+    "TITLE": "Impressum",
+    "PROVIDER_HEADING": "Angaben gemäß § 5 DDG",
+    "ADDRESS": "Cristian Jaraba Castilla<br>Friedrichstraße 11<br>10969 Berlin<br>Deutschland",
+    "PRIVATE_NOTE": "Dies ist eine private Portfolio-Website. Sie wird nicht gewerblich betrieben, weshalb weder ein Handelsregistereintrag noch eine Umsatzsteuer-Identifikationsnummer besteht.",
+    "CONTACT_HEADING": "Kontakt",
+    "CONTACT_EMAIL": "E-Mail:",
+    "RESPONSIBLE_HEADING": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+    "RESPONSIBLE_BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Deutschland",
+    "TERMS": {
+      "HEADING": "Annahme der Bedingungen",
+      "BODY_1": "Mit dem Zugriff auf",
+      "BODY_2": "(Produkt) und dessen Nutzung erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitlinien und Änderungen daran an, die Ihnen von Zeit zu Zeit vorgelegt werden. Ich kann diese Bedingungen jederzeit und ohne Vorankündigung aktualisieren oder ändern."
+    },
+    "SCOPE": {
+      "HEADING": "Umfang und Eigentum am Produkt",
+      "ORIGIN_1": "entstand als Studienprojekt in einem Webentwicklungs-Bootcamp der",
+      "ORIGIN_2": "Es dient Ausbildungszwecken und ist nicht für den umfangreichen privaten & geschäftlichen Einsatz vorgesehen. Daher kann ich keine durchgehende Verfügbarkeit, Zuverlässigkeit, Richtigkeit oder sonstige Qualitätsmerkmale dieses Produkts gewährleisten.",
+      "DESIGN_1": "Das Design von",
+      "DESIGN_2": "ist Eigentum der",
+      "DESIGN_3": "Die unbefugte Nutzung, Vervielfältigung, Bearbeitung, Verbreitung oder Nachbildung des Designs ist ausdrücklich untersagt."
+    },
+    "RIGHTS": {
+      "HEADING": "Schutzrechte",
+      "BODY_1": "Alle Schutzrechte an",
+      "BODY_2": "liegen bei mir, einschließlich aller zugehörigen urheberrechtlich geschützten Inhalte, Marken und sonstigen geschützten Informationen, mit Ausnahme des Designs der"
+    },
+    "USE": {
+      "HEADING": "Nutzung des Produkts",
+      "BODY_1": "darf ausschließlich zu rechtmäßigen Zwecken und im Einklang mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung von",
+      "BODY_2": "für rechtswidrige Handlungen oder dazu, eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist ausdrücklich untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von"
+    },
+    "DISCLAIMER": {
+      "HEADING": "Gewährleistungsausschluss und Haftungsbeschränkung",
+      "BODY_1": "wird „wie besehen“ und ohne jede ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, insbesondere ohne die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. Weder ich noch die",
+      "BODY_2": "haften, auch wenn auf die Möglichkeit solcher Schäden hingewiesen wurde, für direkte, indirekte, zufällige, besondere, Folge- oder Strafschäden — insbesondere nicht für entgangenen Gewinn, Verlust von Geschäftswert, Nutzungs- oder Datenverlust oder andere immaterielle Verluste — aus der Nutzung oder Leistung von"
+    },
+    "INDEMNITY": {
+      "HEADING": "Freistellung",
+      "BODY_1": "Sie stellen mich, die",
+      "BODY_2": "sowie deren verbundene Unternehmen, Partner, Organe, Geschäftsführer, Vertreter und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten und Haftungen (einschließlich angemessener Rechtsverfolgungskosten) frei, die sich aus Ihrer Nutzung von",
+      "BODY_3": "und/oder einem Verstoß gegen dieses Impressum ergeben."
+    },
+    "LINKS": {
+      "HEADING": "Haftung für Links",
+      "BODY": "Diese Website verlinkt auf externe Seiten, deren Inhalte ich nicht kontrolliere; für diese Inhalte ist stets der jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren auf den verlinkten Seiten keine Rechtsverstöße erkennbar. Eine dauerhafte inhaltliche Kontrolle ist ohne konkrete Anhaltspunkte für einen Rechtsverstoß nicht zumutbar; bei Bekanntwerden entferne ich den entsprechenden Link."
+    },
+    "PRIVACY": {
+      "HEADING": "Datenschutzerklärung",
+      "INTRO": "Dieser Abschnitt erläutert, welche personenbezogenen Daten diese Website verarbeitet, auf welcher Rechtsgrundlage dies geschieht und welche Rechte Ihnen nach der Datenschutz-Grundverordnung (DSGVO) zustehen.",
+      "CONTROLLER": {
+        "HEADING": "Verantwortlicher",
+        "BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Deutschland. E-Mail:"
+      },
+      "LOGS": {
+        "HEADING": "Server-Logfiles",
+        "BODY": "Beim Aufruf dieser Website erfasst der Hosting-Anbieter automatisch die Daten, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit der Anfrage, die angeforderte Ressource, die verweisende Seite sowie Browser und Betriebssystem. Diese Daten werden zur Bereitstellung und Absicherung der Website verarbeitet, auf Grundlage eines berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO, und nicht mit anderen Daten zusammengeführt."
+      },
+      "FORM": {
+        "HEADING": "Kontaktformular und E-Mail",
+        "BODY": "Das Kontaktformular fragt Ihren Namen, Ihre E-Mail-Adresse und Ihre Nachricht ab. Diese Daten werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet, auf Grundlage von Art. 6 Abs. 1 lit. a und f DSGVO, und gelöscht, sobald die Anfrage erledigt ist und keine Aufbewahrungspflicht entgegensteht. Ihre Einwilligung erteilen Sie über das Kontrollkästchen im Formular und können sie jederzeit per E-Mail mit Wirkung für die Zukunft widerrufen. Gleiches gilt, wenn Sie mir direkt schreiben."
+      },
+      "COOKIES": {
+        "HEADING": "Cookies, Analyse und Schriftarten",
+        "BODY": "Diese Website setzt keine Cookies, zeigt keine Werbung und nutzt keine Analyse- oder Tracking-Dienste. Schriftarten und Icons werden von dieser Website selbst ausgeliefert, sodass keine Anfrage an einen Drittanbieter geht. Die im Header gewählte Sprache wirkt nur in Ihrem Browser und wird nicht gespeichert."
+      },
+      "EXTERNAL": {
+        "HEADING": "Externe Links",
+        "BODY": "Die Links zu GitHub, LinkedIn und der Developer Akademie führen zu Websites Dritter. Sobald Sie einem Link folgen, gilt die Datenschutzerklärung des jeweiligen Anbieters; auf die dort erhobenen Daten habe ich keinen Einfluss."
+      },
+      "RIGHTS": {
+        "HEADING": "Ihre Rechte",
+        "BODY": "Sie haben das Recht auf Auskunft über Ihre personenbezogenen Daten sowie auf deren Berichtigung, Löschung oder Einschränkung der Verarbeitung, das Recht auf Datenübertragbarkeit und das Recht auf Widerspruch gegen eine Verarbeitung auf Grundlage eines berechtigten Interesses. Zur Ausübung dieser Rechte wenden Sie sich an die oben genannte Adresse. Zudem steht Ihnen ein Beschwerderecht bei einer Aufsichtsbehörde zu; zuständig ist hier die Berliner Beauftragte für Datenschutz und Informationsfreiheit."
+      }
+    },
+    "QUESTIONS": "Bei Fragen oder Mitteilungen erreichen Sie mich unter",
+    "DATE": "Stand: 7. Oktober 2026"
+  }
+}

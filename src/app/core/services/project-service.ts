@@ -15,11 +15,12 @@ export class ProjectService {
     /** Project opened in the project dialog, `null` while it is closed. */
     currentProject = signal<Project | null>(null);
 
+    /** Builds the static project list. */
     constructor() {
         this.projects = [
             {
                 projectName: 'Join',
-                description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+                descriptionKey: 'PROJECTS.ITEMS.JOIN',
                 technologies: [{
                     technology: 'HTML',
                     svg: 'assets/icons/skills-green/HTML.svg'
@@ -43,7 +44,7 @@ export class ProjectService {
             },
             {
                 projectName: 'El Pollo Loco',
-                description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+                descriptionKey: 'PROJECTS.ITEMS.EL_POLLO_LOCO',
                 technologies: [{
                     technology: 'HTML',
                     svg: 'assets/icons/skills-green/HTML.svg'
@@ -60,7 +61,7 @@ export class ProjectService {
             },
             {
                 projectName: 'DABubble',
-                description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+                descriptionKey: 'PROJECTS.ITEMS.DABUBBLE',
                 technologies: [{
                     technology: 'HTML',
                     svg: 'assets/icons/skills-green/HTML.svg'

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -11,7 +12,8 @@ import { RouterLink } from '@angular/router';
  */
 @Component({
   imports: [ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    TranslatePipe
   ],
   selector: 'app-contact',
   styleUrl: './contact.scss',
@@ -37,20 +39,20 @@ export class Contact {
     })
   });
 
-  /** Placeholder of the name field, replaced by a hint while it is invalid. */
-  namePlaceholder = 'Your name goes here';
+  /** Placeholder key of the name field, swapped for a hint while invalid. */
+  namePlaceholder = 'CONTACT.PLACEHOLDER.NAME';
 
-  /** Placeholder of the email field, replaced by a hint while it is invalid. */
-  emailPlaceholder = 'youremail@email.com';
+  /** Placeholder key of the email field, swapped for a hint while invalid. */
+  emailPlaceholder = 'CONTACT.PLACEHOLDER.EMAIL';
 
-  /** Placeholder of the message field, replaced by a hint while it is invalid. */
-  messagePlaceholder = 'Hello Cristian, I am interested in...';
+  /** Placeholder key of the message field, swapped for a hint while invalid. */
+  messagePlaceholder = 'CONTACT.PLACEHOLDER.MESSAGE';
 
   /** Shows a hint in the name placeholder while the name is missing. */
   checkName() {
     this.namePlaceholder = this.userform.controls.firstName.invalid
-      ? 'Oops! It seems your name is missing'
-      : 'Your name goes here';
+      ? 'CONTACT.HINT.NAME'
+      : 'CONTACT.PLACEHOLDER.NAME';
   }
 
   /**
@@ -61,20 +63,20 @@ export class Contact {
   checkEmail() {
     const email = this.userform.controls.email;
     if (email.hasError('required')) {
-      this.emailPlaceholder = 'Hoppla! Your email is required';
+      this.emailPlaceholder = 'CONTACT.HINT.EMAIL_REQUIRED';
     } else if (email.hasError('pattern')) {
-      this.emailPlaceholder = 'Hoppla! This email is not valid';
+      this.emailPlaceholder = 'CONTACT.HINT.EMAIL_INVALID';
       email.setValue('');
     } else {
-      this.emailPlaceholder = 'youremail@email.com';
+      this.emailPlaceholder = 'CONTACT.PLACEHOLDER.EMAIL';
     }
   }
 
   /** Shows a hint in the message placeholder while the message is missing. */
   checkMessage() {
     this.messagePlaceholder = this.userform.controls.message.invalid
-      ? 'What do you need to develop?'
-      : 'Hello Cristian, I am interested in...';
+      ? 'CONTACT.HINT.MESSAGE'
+      : 'CONTACT.PLACEHOLDER.MESSAGE';
   }
 
   /**

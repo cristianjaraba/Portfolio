@@ -1,34 +1,35 @@
 <section id="contact" class="contact">
     <div class="contact__text-container">
-        <p class="contact__eyebrow">Contact me</p>
-        <h2 class="contact__heading">Let's work<br>together</h2>
-        <p class="contact__subhead">Got a problem to solve?</p>
-        <p class="contact__text">Encourage people to contact you and describe what role you are interested in. Show
-            that you'll add value to their projects through your work.</p>
-        <p class="contact__text">Need a Frontend developer? <span>Let's talk!</span></p>
+        <p class="contact__eyebrow">{{ 'CONTACT.EYEBROW' | translate }}</p>
+        <h2 class="contact__heading">{{ 'CONTACT.HEADING_1' | translate }}<br>{{ 'CONTACT.HEADING_2' | translate }}</h2>
+        <p class="contact__subhead">{{ 'CONTACT.SUBHEAD' | translate }}</p>
+        <p class="contact__text">{{ 'CONTACT.TEXT' | translate }}</p>
+        <p class="contact__text">
+            {{ 'CONTACT.CTA' | translate }} <span>{{ 'CONTACT.CTA_HIGHLIGHT' | translate }}</span>
+        </p>
     </div>
   <form class="contact__form" [formGroup]="userform" (ngSubmit)="formSubmit()">
 
     <div class="contact__field">
-      <label class="contact__label" for="name">What's your name?</label>
+      <label class="contact__label" for="name">{{ 'CONTACT.LABEL.NAME' | translate }}</label>
       <input class="contact__input" id="name" type="text" formControlName="firstName"
-        [placeholder]="namePlaceholder"
+        [placeholder]="namePlaceholder | translate"
         (blur)="checkName()"
         [class.contact__input--error]="userform.controls.firstName.touched && userform.controls.firstName.invalid" />
     </div>
 
     <div class="contact__field">
-      <label class="contact__label" for="email">What's your email?</label>
+      <label class="contact__label" for="email">{{ 'CONTACT.LABEL.EMAIL' | translate }}</label>
       <input class="contact__input" id="email" type="text" formControlName="email"
-        [placeholder]="emailPlaceholder"
+        [placeholder]="emailPlaceholder | translate"
         (blur)="checkEmail()"
         [class.contact__input--error]="userform.controls.email.touched && userform.controls.email.invalid" />
     </div>
 
     <div class="contact__field">
-      <label class="contact__label" for="message">How can I help you?</label>
+      <label class="contact__label" for="message">{{ 'CONTACT.LABEL.MESSAGE' | translate }}</label>
       <input class="contact__input" id="message" type="text" formControlName="message"
-        [placeholder]="messagePlaceholder"
+        [placeholder]="messagePlaceholder | translate"
         (blur)="checkMessage()"
         [class.contact__input--error]="userform.controls.message.touched && userform.controls.message.invalid" />
     </div>
@@ -36,17 +37,19 @@
     <div class="contact__privacy">
       <input class="contact__checkbox" id="privacy-policy" type="checkbox" formControlName="privacyPolicy">
       <label class="contact__privacy-text" for="privacy-policy">
-        I've read the <a [routerLink]="'/imprint'" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+        {{ 'CONTACT.PRIVACY_BEFORE' | translate }}
+        <a [routerLink]="'/imprint'" fragment="privacy" target="_blank">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>
+        {{ 'CONTACT.PRIVACY_AFTER' | translate }}
       </label>
     </div>
     @if (userform.controls.privacyPolicy.touched && userform.controls.privacyPolicy.invalid) {
-      <span class="contact__error">Please accept the privacy policy</span>
+      <span class="contact__error">{{ 'CONTACT.PRIVACY_ERROR' | translate }}</span>
     }
 
     <button class="contact__button contact__marquee" [disabled]="userform.invalid" type="submit">
         <div class="contact__marquee-track">
             <div class="contact__marquee-content">
-                <span>Say Hello ;)</span>
+                <span>{{ 'CONTACT.SUBMIT' | translate }}</span>
             </div>
         </div>
     </button>

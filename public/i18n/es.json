@@ -1,0 +1,185 @@
+{
+  "COMMON": {
+    "HOME": "Inicio"
+  },
+  "NAV": {
+    "ABOUT": "Sobre mí",
+    "SKILLS": "Skills",
+    "PROJECTS": "Proyectos"
+  },
+  "HERO": {
+    "ROLE": "Full Stack Developer",
+    "CHECK_WORK": "Mira mi trabajo",
+    "CONTACT": "Contacta conmigo",
+    "TICKER": {
+      "OPEN_TO_WORK": "Abierto a nuevos retos",
+      "REMOTE": "Disponible para trabajo remoto",
+      "ROLE": "Full Stack Developer",
+      "LOCATION": "Con base en Berlín"
+    }
+  },
+  "ABOUT": {
+    "EYEBROW": "Quién soy",
+    "HEADING": "Sobre mí",
+    "INTRO": "Hola, soy Cristian. Construyo aplicaciones web de principio a fin, desde la interfaz que se toca hasta los datos que la alimentan. Lo que me hace volver al código es el momento en que una idea por fin se comporta como la había imaginado, y la siguiente idea que eso abre.",
+    "LOCATION": "Con base en Berlín, abierto al trabajo remoto en toda Europa y dispuesto a mudarme por el equipo adecuado.",
+    "CURIOSITY": "Curioso por defecto. Angular y TypeScript son mi terreno, y React y Vue son lo siguiente en la lista. Aprender un stack nuevo es parte del trabajo, no un obstáculo.",
+    "PROBLEM_SOLVING": "Descompongo un problema hasta que cada pieza es lo bastante pequeña para razonarla, y luego busco la solución más simple que siga aguantando. Pensamiento analítico, constancia y hacer las preguntas correctas a tiempo mantienen las sorpresas pequeñas."
+  },
+  "SKILLS": {
+    "EYEBROW": "Tecnologías",
+    "HEADING": "Habilidades",
+    "INTRO": "Trabajo en todo el front end: HTML semántico, CSS moderno, TypeScript y Angular, conectados a APIs REST y datos en tiempo real. Me importan el marcado accesible, unos límites claros entre componentes y un código que la siguiente persona pueda leer. El desarrollo web se mueve rápido, así que aprender forma parte de mi rutina y no es algo que encaje después.",
+    "QUESTION": "¿Necesitas",
+    "QUESTION_HIGHLIGHT": "otra tecnología?",
+    "INVITE": "Escríbeme. Me gusta trabajar más allá de lo que ya sé, y aprendo herramientas nuevas rápido.",
+    "CTA": "Hablamos",
+    "LEARNING": "Lo siguiente que quiero aprender",
+    "ITEMS": {
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "JAVASCRIPT": "JavaScript",
+      "REST_API": "API REST",
+      "TYPESCRIPT": "TypeScript",
+      "ANGULAR": "Angular",
+      "GIT": "Git",
+      "MATERIAL_DESIGN": "Material Design",
+      "SCRUM": "Scrum",
+      "GROWTH_MINDSET": "Mentalidad de crecimiento"
+    }
+  },
+  "PROJECTS": {
+    "EYEBROW": "Portfolio",
+    "HEADING": "Proyectos destacados",
+    "INTRO": "Una selección de lo que he construido. Abre cualquier proyecto para ver qué hace, sobre qué stack funciona y dónde está el código.",
+    "ITEMS": {
+      "JOIN": "Gestor de tareas basado en el principio Kanban. Crea tareas, muévelas entre columnas arrastrando y asígnalas a categorías y a miembros del equipo.",
+      "EL_POLLO_LOCO": "Juego de plataformas con una arquitectura orientada a objetos. Ayuda a Pepe a reunir monedas y botellas de tabasco para enfrentarse a la gallina loca.",
+      "DABUBBLE": "Mensajería de equipo inspirada en Slack, con chat en tiempo real, respuestas en hilo y canales, para que todo un equipo mantenga sus conversaciones en un solo lugar."
+    },
+    "DIALOG": {
+      "NEXT": "Siguiente proyecto",
+      "ABOUT": "¿De qué trata este proyecto?",
+      "GITHUB": "GitHub",
+      "LIVE_DEMO": "Demo en vivo"
+    }
+  },
+  "CONTACT": {
+    "EYEBROW": "Contacto",
+    "HEADING_1": "Trabajemos",
+    "HEADING_2": "juntos",
+    "SUBHEAD": "¿Tienes un problema que resolver?",
+    "TEXT": "Busco un equipo en el que pueda responsabilizarme de funcionalidades reales y seguir aprendiendo de gente que va por delante. Cuéntame qué estás construyendo y qué se interpone, y te diré con honestidad cómo puedo ayudar.",
+    "CTA": "¿Necesitas un Full Stack Developer?",
+    "CTA_HIGHLIGHT": "¡Hablamos!",
+    "LABEL": {
+      "NAME": "¿Cómo te llamas?",
+      "EMAIL": "¿Cuál es tu correo?",
+      "MESSAGE": "¿En qué puedo ayudarte?"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Aquí va tu nombre",
+      "EMAIL": "tucorreo@email.com",
+      "MESSAGE": "Hola Cristian, me interesa..."
+    },
+    "HINT": {
+      "NAME": "¡Ups! Falta tu nombre",
+      "EMAIL_REQUIRED": "¡Ups! Tu correo es obligatorio",
+      "EMAIL_INVALID": "¡Ups! Este correo no parece válido",
+      "MESSAGE": "¡Ups! Dime qué necesitas"
+    },
+    "PRIVACY_BEFORE": "He leído la",
+    "PRIVACY_LINK": "política de privacidad",
+    "PRIVACY_AFTER": "y acepto el tratamiento de mis datos descrito en ella.",
+    "PRIVACY_ERROR": "Acepta la política de privacidad",
+    "SUBMIT": "Di hola ;)"
+  },
+  "FOOTER": {
+    "ROLE": "Full Stack Developer",
+    "LOCATION": "Berlín, Alemania",
+    "LINKS": {
+      "GITHUB": "GitHub",
+      "LINKEDIN": "LinkedIn",
+      "EMAIL": "Correo",
+      "LEGAL": "Aviso legal"
+    }
+  },
+  "IMPRINT": {
+    "TITLE": "Aviso legal",
+    "PROVIDER_HEADING": "Información según el § 5 DDG",
+    "ADDRESS": "Cristian Jaraba Castilla<br>Friedrichstraße 11<br>10969 Berlin<br>Alemania",
+    "PRIVATE_NOTE": "Esta es una web de portfolio privada. No se explota comercialmente, por lo que no cuenta con inscripción en el registro mercantil ni con número de identificación a efectos del IVA.",
+    "CONTACT_HEADING": "Contacto",
+    "CONTACT_EMAIL": "Correo electrónico:",
+    "RESPONSIBLE_HEADING": "Responsable del contenido según el § 18 (2) MStV",
+    "RESPONSIBLE_BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Alemania",
+    "TERMS": {
+      "HEADING": "Aceptación de las condiciones",
+      "BODY_1": "Al acceder a",
+      "BODY_2": "(el Producto) y utilizarlo, usted acepta las siguientes condiciones, así como cualquier política, directriz o modificación de las mismas que se le presente en algún momento. Puedo actualizar o modificar estas condiciones en cualquier momento y sin previo aviso."
+    },
+    "SCOPE": {
+      "HEADING": "Alcance y titularidad del producto",
+      "ORIGIN_1": "se ha desarrollado como proyecto de estudiante en un bootcamp de desarrollo web de",
+      "ORIGIN_2": "Tiene una finalidad formativa y no está pensado para un uso personal & comercial intensivo. Por ello no puedo garantizar su disponibilidad continua, su fiabilidad, su exactitud ni ningún otro aspecto de calidad.",
+      "DESIGN_1": "El diseño de",
+      "DESIGN_2": "es propiedad de",
+      "DESIGN_3": "Queda expresamente prohibido su uso, reproducción, modificación, distribución o replicación sin autorización."
+    },
+    "RIGHTS": {
+      "HEADING": "Derechos de propiedad",
+      "BODY_1": "Todos los derechos sobre",
+      "BODY_2": "me pertenecen, incluidos los contenidos protegidos por derechos de autor, las marcas y cualquier otra información protegida, con la excepción del diseño, propiedad de"
+    },
+    "USE": {
+      "HEADING": "Uso del producto",
+      "BODY_1": "solo puede utilizarse con fines lícitos y conforme a toda la legislación aplicable. Queda expresamente prohibido usar",
+      "BODY_2": "para actividades ilegales o para acosar, dañar, amenazar o intimidar a otra persona. Usted es el único responsable de sus interacciones con otros usuarios de"
+    },
+    "DISCLAIMER": {
+      "HEADING": "Exclusión de garantías y limitación de responsabilidad",
+      "BODY_1": "se ofrece «tal cual», sin garantía de ningún tipo, expresa o implícita, incluidas, entre otras, las garantías implícitas de comerciabilidad, idoneidad para un fin determinado y no vulneración de derechos. Ni yo ni",
+      "BODY_2": "responderemos en ningún caso, ni siquiera si se advirtió de la posibilidad de tales daños, por daños directos, indirectos, incidentales, especiales, consecuentes o punitivos —incluidos la pérdida de beneficios, de fondo de comercio, de uso o de datos, u otras pérdidas intangibles— derivados del uso o del funcionamiento de"
+    },
+    "INDEMNITY": {
+      "HEADING": "Indemnización",
+      "BODY_1": "Usted se compromete a indemnizar y mantener indemnes a mí, a",
+      "BODY_2": "y a sus empresas vinculadas, socios, cargos, administradores, representantes y empleados frente a cualquier reclamación, demanda, pérdida, daño, coste o responsabilidad (incluidos los gastos razonables de defensa jurídica) derivados del uso que usted haga de",
+      "BODY_3": "o del incumplimiento de este aviso legal."
+    },
+    "LINKS": {
+      "HEADING": "Responsabilidad por enlaces",
+      "BODY": "Esta web enlaza a sitios externos cuyos contenidos no controlo, por lo que la responsabilidad sobre ellos corresponde siempre a su respectivo proveedor. En el momento de enlazarlos no se apreciaba ninguna infracción legal. No es exigible una supervisión permanente de esos contenidos sin indicios concretos de infracción; en cuanto tenga conocimiento de alguna, retiraré el enlace."
+    },
+    "PRIVACY": {
+      "HEADING": "Política de privacidad",
+      "INTRO": "Esta sección explica qué datos personales trata esta web, con qué base jurídica y qué derechos le asisten en virtud del Reglamento General de Protección de Datos (RGPD).",
+      "CONTROLLER": {
+        "HEADING": "Responsable del tratamiento",
+        "BODY": "Cristian Jaraba Castilla, Friedrichstraße 11, 10969 Berlin, Alemania. Correo electrónico:"
+      },
+      "LOGS": {
+        "HEADING": "Archivos de registro del servidor",
+        "BODY": "Al abrir esta web, el proveedor de alojamiento registra automáticamente los datos que transmite su navegador: dirección IP, fecha y hora de la solicitud, el recurso solicitado, la página de procedencia y su navegador y sistema operativo. Estos datos se tratan para prestar y proteger el servicio, sobre la base del interés legítimo del art. 6.1.f del RGPD, y no se combinan con ningún otro dato."
+      },
+      "FORM": {
+        "HEADING": "Formulario de contacto y correo electrónico",
+        "BODY": "El formulario de contacto solicita su nombre, su dirección de correo electrónico y su mensaje. Estos datos se utilizan únicamente para responder a su consulta, sobre la base del art. 6.1.a y f del RGPD, y se suprimen una vez resuelta la consulta y siempre que no exista una obligación de conservación. Presta su consentimiento mediante la casilla del formulario y puede retirarlo en cualquier momento por correo electrónico, con efectos para el futuro. Lo mismo se aplica si me escribe directamente."
+      },
+      "COOKIES": {
+        "HEADING": "Cookies, analítica y tipografías",
+        "BODY": "Esta web no instala cookies, no muestra publicidad y no utiliza servicios de analítica ni de seguimiento. Las tipografías y los iconos se sirven desde la propia web, de modo que ninguna petición llega a un proveedor externo. El idioma que seleccione en la cabecera se aplica solo en su navegador y no se almacena."
+      },
+      "EXTERNAL": {
+        "HEADING": "Enlaces externos",
+        "BODY": "Los enlaces a GitHub, LinkedIn y Developer Akademie llevan a webs de terceros. En cuanto siga uno de ellos se aplica la política de privacidad de ese proveedor, y no tengo influencia sobre los datos que recoja."
+      },
+      "RIGHTS": {
+        "HEADING": "Sus derechos",
+        "BODY": "Tiene derecho a acceder a sus datos personales y a solicitar su rectificación, supresión o la limitación de su tratamiento, así como derecho a la portabilidad de los datos y a oponerse a un tratamiento basado en el interés legítimo. Para ejercer cualquiera de estos derechos, escriba a la dirección indicada arriba. También puede presentar una reclamación ante una autoridad de control; la competente aquí es la Comisionada de Berlín para la Protección de Datos y la Libertad de Información."
+      }
+    },
+    "QUESTIONS": "Para cualquier pregunta o notificación, puede escribirme a",
+    "DATE": "Fecha: 7 de octubre de 2026"
+  }
+}

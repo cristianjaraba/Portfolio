@@ -2,19 +2,19 @@
 
     <div class="skills-section__container skills-section__container--text">
         <p class="skills-section__eyebrow">
-            Technologies
+            {{ 'SKILLS.EYEBROW' | translate }}
         </p>
         <article>
-            <h2 class="skills-section__heading">Skill&nbsp;Set</h2>
-            <p>A short introduction of your skills. Highlight your experience of using different front-end technologies
-                and emphasise your openness to learning and adapting to new technologies. Show how important it is for
-                you to keep up with the rapid changes in web development.</p>
-            <p class="skills-section__question">You need <span>another skill?</span></p>
-            <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+            <h2 class="skills-section__heading">{{ 'SKILLS.HEADING' | translate }}</h2>
+            <p>{{ 'SKILLS.INTRO' | translate }}</p>
+            <p class="skills-section__question">
+                {{ 'SKILLS.QUESTION' | translate }} <span>{{ 'SKILLS.QUESTION_HIGHLIGHT' | translate }}</span>
+            </p>
+            <p>{{ 'SKILLS.INVITE' | translate }}</p>
             <a class="skills-section__marquee skills-section__marquee--contact" href="#contact">
                 <div class="skills-section__marquee-track">
                     <div class="skills-section__marquee-content">
-                        <span>Let's talk</span>
+                        <span>{{ 'SKILLS.CTA' | translate }}</span>
                     </div>
                 </div>
             </a>
@@ -22,13 +22,14 @@
     </div>
 
     <div class="skills-section__container skills-section__container--icons">
-        @for (icon of icons; track $index) {
-        <div class="skills-section__item" [style.cursor]="icon === 'Growth mindset' ? 'pointer' : null">
+        @for (skill of skills; track skill.id) {
+        <div class="skills-section__item" [style.cursor]="skill.id === learningId ? 'pointer' : null">
             <div class="skill-wrapper">
-                <img [src]="'assets/icons/skills/' + icon + '.svg'" [alt]="icon" class="skill-icon" />
-                @if (icon === 'Growth mindset') {
+                <img [src]="'assets/icons/skills/' + skill.id + '.svg'" [alt]="skill.labelKey | translate"
+                    class="skill-icon" />
+                @if (skill.id === learningId) {
                 <div class="learning-dialog">
-                    <p>I have special interest in learning</p>
+                    <p>{{ 'SKILLS.LEARNING' | translate }}</p>
                     <div class="to-learn-skills">
                         <div>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -59,7 +60,7 @@
                 </div>
                 }
             </div>
-            <span>{{ icon }}</span>
+            <span>{{ skill.labelKey | translate }}</span>
         </div>
         }
     </div>

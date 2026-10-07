@@ -6,12 +6,11 @@
     </div>
     <div class="about-me-section__container about-me-section__container--text">
         <p class="about-me-section__eyebrow">
-            Who I am
+            {{ 'ABOUT.EYEBROW' | translate }}
         </p>
         <article>
-            <h2 class="about-me-section__heading">About me</h2>
-            <p>Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are you passionate
-                about coding? What is your source of inspiration for improving your programming skills?</p>
+            <h2 class="about-me-section__heading">{{ 'ABOUT.HEADING' | translate }}</h2>
+            <p>{{ 'ABOUT.INTRO' | translate }}</p>
             <ul>
                 <li><svg class="about-me-section__icon-location" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -19,9 +18,7 @@
                             fill="#3DCFB6" />
                     </svg>
 
-                    <p>
-                        Where are you based? Would you be open to working remotely or potentially relocating?
-                    </p>
+                    <p>{{ 'ABOUT.LOCATION' | translate }}</p>
                 </li>
                 <li>
                     <svg class="about-me-section__icon-cognition" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,10 +27,7 @@
                             fill="#3DCFB6" />
                     </svg>
 
-                    <p>
-                        Show that you are open-minded. Are you enthusiastic about learning new technologies and
-                        continually improving your skills?
-                    </p>
+                    <p>{{ 'ABOUT.CURIOSITY' | translate }}</p>
                 </li>
                 <li>
                     <svg class="about-me-section__icon-realises" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,12 +36,7 @@
                             fill="#3DCFB6" />
                     </svg>
 
-                    <p>
-                        A brief description of your problem-solving approach.
-                        Do you learn from each challenge as you search for the most efficient or elegant solution? You
-                        can include some keywords like: analytical thinking, creativity, persistence and collaboration.
-
-                    </p>
+                    <p>{{ 'ABOUT.PROBLEM_SOLVING' | translate }}</p>
                 </li>
             </ul>
         </article>

@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 /**
@@ -8,16 +9,19 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
  * the component stylesheet, which is why they are sanitized explicitly.
  */
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-hero',
   styleUrl: './hero.scss',
   templateUrl: './hero.html',
 })
 export class Hero {
+  /** Sanitizer used to trust the inlined social media icons. */
   private sanitizer = inject(DomSanitizer);
 
   /** Social media links of the hero, each with its inline SVG icon. */
   socialMediaItems: { label: string; href: string; icon: SafeHtml }[];
+
+  /** Builds the social media links together with their sanitized icons. */
   constructor() {
 
     this.socialMediaItems = [

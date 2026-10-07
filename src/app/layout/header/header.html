@@ -2,23 +2,23 @@
     <div class="header-left-container">
         <div class="lang-btn-container">
             @for (lang of languages; track lang.code) {
-            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang"
-                [disabled]="lang.code === activeLang" (click)="setLanguage(lang.code)">
+            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang()"
+                [disabled]="lang.code === activeLang()" (click)="setLanguage(lang.code)">
                 {{ lang.label }}
             </button>
             }
         </div>
         <nav>
             <ul>
-                @for (item of navItems; track item.label) {
+                @for (item of navItems; track item.fragment) {
                 <li>
-                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.label }}</a>
+                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.labelKey | translate }}</a>
                 </li>
                 }
             </ul>
         </nav>
     </div>
-    <a class="header__logo-link" routerLink="/" aria-label="Home">
+    <a class="header__logo-link" routerLink="/" [attr.aria-label]="'COMMON.HOME' | translate">
         <app-personal-logo />
     </a>
     <div class="navigation_menu" #menu>
@@ -34,17 +34,17 @@
     <dialog closedby="any" #navigation_dialog>
         <nav>
             <ul>
-                @for (item of navItems; track item.label) {
+                @for (item of navItems; track item.fragment) {
                 <li (click)="closeDialog()">
-                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.label }}</a>
+                    <a routerLink="/" [fragment]="item.fragment"><span class="point"></span>{{ item.labelKey | translate }}</a>
                 </li>
                 }
             </ul>
         </nav>
         <div class="lang-btn-container">
             @for (lang of languages; track lang.code) {
-            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang"
-                [disabled]="lang.code === activeLang" (click)="setLanguage(lang.code)">
+            <button class="lang-btn" [class.lang-btn--activated]="lang.code === activeLang()"
+                [disabled]="lang.code === activeLang()" (click)="setLanguage(lang.code)">
                 {{ lang.label }}
             </button>
             }

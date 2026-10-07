@@ -37,11 +37,9 @@
         margin-right: 10px;
     }
 
-    &__name-wrapper {
-        svg {
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out;
-        }
+    &__name-wrapper svg {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
     }
 
     &__technologies {
@@ -66,7 +64,7 @@
         position: relative;
         background: none;
         border: none;
-        padding: 30px 0px;
+        padding: 30px 0;
         @include mix.flex-column;
         align-items: flex-start;
         justify-content: center;
@@ -88,7 +86,6 @@
 
     &__item {
         border-bottom: 1px solid vars.$primary-green;
-        cursor: pointer;
 
         &:first-child {
             border-top: 1px solid vars.$primary-green;
@@ -96,17 +93,8 @@
     }
 
     &__screenshot-container {
-        position: absolute;
-        height: 150px;
-        width: 200px;
-        border-radius: 20px;
-        right: -220px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         display: none;
-        visibility: hidden;
-        transition: visibility 0.2s ease-in-out;
+        position: absolute;
 
         &--join {
             top: -20px;
@@ -115,6 +103,13 @@
         &--dabubble {
             bottom: -20px;
         }
+    }
+
+    &__screenshot {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
     }
 
     &__screenshot-shadow {
@@ -130,22 +125,17 @@
 }
 
 @media (min-width: 481px) {
-
     .projects {
-
         &__text {
-            max-width: 400px;
+            max-width: 75%;
         }
-
     }
-
 }
 
 @media (min-width: 769px) {
     .projects {
-        padding-bottom: 0px;
+        padding-bottom: 0;
         @include mix.flex-column;
-
         justify-content: center;
 
         &__header,
@@ -158,95 +148,39 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            padding-left: 2rem;
-            padding-right: 2rem;
-            transition: background-color 0.2s ease-in-out;
+            padding-inline: 2rem;
 
             &:hover {
                 background-color: #3DCFB64D;
-
             }
         }
-
     }
 }
 
 @media (min-width: 1024px) {
     .projects {
+        &__card:hover {
+            .projects__screenshot-container {
+                display: flex;
+            }
 
-        &__card {
-            &:hover {
-                .projects__screenshot-container {
-                    display: flex;
-                    visibility: visible;
-                }
-
-                .projects__name-wrapper {
-                    svg {
-                        opacity: 1;
-                    }
-                }
+            .projects__name-wrapper svg {
+                opacity: 1;
             }
         }
 
         &__screenshot-container {
-            position: absolute;
-            height: 150px;
-            width: 200px;
-            border-radius: 20px;
-            right: -220px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            display: none;
-            visibility: hidden;
-            transition: visibility 0.2s ease-in-out;
-
-            &--join {
-                top: -20px;
-            }
-
-            &--dabubble {
-                bottom: -20px;
-            }
-        }
-
-        &__screenshot-shadow {
-            position: absolute;
-            z-index: -1;
-            top: 15px;
-            right: -15px;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            @include mix.stripes(-45deg, 1px, 12px);
+            left: calc(100% + 32px);
+            right: calc(100% - min(100vw - 50px, 1440px) + 32px);
         }
     }
-
 }
 
 @media (min-width: 1280px) {
     .projects {
-
         &__header,
         &__list {
-            width: 100%;
             max-width: 800px;
-        }
-
-        &__card {
-            &:hover {
-                .projects__screenshot-container {
-                    display: flex;
-                    visibility: visible;
-                }
-            }
-        }
-
-        &__screenshot-container {
-            height: 250px;
-            width: 300px;
-            right: -350px;
         }
     }
 }

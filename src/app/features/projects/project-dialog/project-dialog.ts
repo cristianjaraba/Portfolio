@@ -1,4 +1,5 @@
 import { Component, inject, ElementRef, viewChild } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ProjectService } from '../../../core/services/project-service';
 
 /**
@@ -8,13 +9,14 @@ import { ProjectService } from '../../../core/services/project-service';
  * the list without the projects section being involved.
  */
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-project-dialog',
   styleUrl: './project-dialog.scss',
   templateUrl: './project-dialog.html',
 })
 export class ProjectDialog {
 
+  /** Source of the project currently shown, shared with the section. */
   projectService = inject(ProjectService);
 
   /** Native dialog element driven by `open` and `close`. */

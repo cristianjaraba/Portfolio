@@ -96,12 +96,16 @@
 
     $track: #{&}-track;
 
+    // The label slides out to the left, is moved back to the right while it is
+    // fully transparent, and slides in again. The whole jump has to happen
+    // inside the opacity 0 window, otherwise the label flashes across the
+    // button on its way over.
     @keyframes marquee-content {
         0%   { transform: translateX(0);     opacity: 1; }
-        45%  { transform: translateX(-150%); opacity: 1; }
-        50%  { transform: translateX(-150%); opacity: 0; }
-        51%  { transform: translateX(150%); }
-        55%  { opacity: 1; }
+        44%  { transform: translateX(-150%); opacity: 1; }
+        45%  { transform: translateX(-150%); opacity: 0; }
+        55%  { transform: translateX(150%);  opacity: 0; }
+        56%  { transform: translateX(150%);  opacity: 1; }
         100% { transform: translateX(0);     opacity: 1; }
     }
 
@@ -110,8 +114,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: $width;
-    padding: 15px 20px;
+    min-width: $width;
+    width: fit-content;
+    max-width: 100%;
+    padding: 15px 24px;
     overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
@@ -127,6 +133,10 @@
         flex-shrink: 0;
         color: $color;
         transition: color 0.2s ease-in-out;
+        // Keeps the label on its own compositing layer, so it is rasterized
+        // once instead of being redrawn at every sub pixel offset of the
+        // animation, which makes the text shimmer.
+        will-change: transform;
     }
 
     #{$track} span {
@@ -150,7 +160,8 @@
 @mixin marquee-button-mobile($width, $color: vars.$primary-green) {
     $track: #{&}-track;
 
-    width: $width;
+    min-width: $width;
+    width: fit-content;
     height: fit-content;
     border-color: $color;
 

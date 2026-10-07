@@ -1,23 +1,23 @@
 <footer class="footer">
     <div class="footer__brand">
-        <a class="footer__logo-link" routerLink="/" aria-label="Home">
+        <a class="footer__logo-link" routerLink="/" [attr.aria-label]="'COMMON.HOME' | translate">
             <app-personal-logo />
         </a>
         <div class="footer__info">
-            <span>Full Stack Developer</span>
-            <span>Berlin Germany</span>
+            <span>{{ 'FOOTER.ROLE' | translate }}</span>
+            <span>{{ 'FOOTER.LOCATION' | translate }}</span>
         </div>
     </div>
     <div class="footer__copy-right">© Cristian Jaraba 2026</div>
 
     <nav class="footer__nav-items-container">
         <ul>
-            @for (item of navItems; track item.label) {
+            @for (item of navItems; track item.labelKey) {
             <li>
                 @if (item.route) {
-                <a [routerLink]="item.route"><span class="point"></span>{{ item.label }}</a>
+                <a [routerLink]="item.route" target="_blank"><span class="point"></span>{{ item.labelKey | translate }}</a>
                 } @else {
-                <a [href]="item.href" target="_blank"><span class="point"></span>{{ item.label }}</a>
+                <a [href]="item.href" target="_blank"><span class="point"></span>{{ item.labelKey | translate }}</a>
                 }
             </li>
             }

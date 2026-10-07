@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, computed, inject } from '@angular/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { Language } from '../../core/interfaces/language';
 import { RouterLink } from '@angular/router';
 import { PersonalLogo } from '../../shared/components/personal-logo/personal-logo';
@@ -10,12 +11,15 @@ import { PersonalLogo } from '../../shared/components/personal-logo/personal-log
  * under the burger menu before being opened.
  */
 @Component({
-  imports: [RouterLink, PersonalLogo],
+  imports: [RouterLink, PersonalLogo, TranslatePipe],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
 })
 export class Header {
+
+  /** Translation service the language switch delegates to. */
+  private translate = inject(TranslateService);
 
   /** Languages offered by the switch. */
   languages: Language[] = [
@@ -24,14 +28,20 @@ export class Header {
     { code: 'es', label: 'ES' }
   ];
 
-  /** Code of the language currently highlighted in the switch. */
-  activeLang: string = 'de';
+  /**
+   * Code of the language currently highlighted in the switch.
+   *
+   * Derived from the translation service rather than stored, so the switch
+   * still shows the right language after navigating to another page.
+   */
+  activeLang = computed(() => this.translate.currentLang());
+
 
   /** Section links; each one scrolls to its fragment on the home page. */
   navItems = [
-    { label: 'About me', fragment: 'about-me'  },
-    { label: 'Skills', fragment: 'skills'  },
-    { label: 'Projects', fragment: 'projects' }
+    { labelKey: 'NAV.ABOUT', fragment: 'about-me' },
+    { labelKey: 'NAV.SKILLS', fragment: 'skills' },
+    { labelKey: 'NAV.PROJECTS', fragment: 'projects' }
   ];
 
   /** Native dialog holding the navigation on small screens. */
@@ -46,12 +56,12 @@ export class Header {
   rectMenu!: DOMRect;
 
   /**
-   * Highlights a language in the switch.
+   * Switches the application to a language.
    *
    * @param code Code of the language to activate.
    */
   setLanguage(code: string): void {
-    this.activeLang = code;
+    this.translate.use(code);
   }
 
   /** Aligns the navigation dialog under the burger menu and opens it. */

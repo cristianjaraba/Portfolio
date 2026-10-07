@@ -1,73 +1,108 @@
 <app-header></app-header>
 <section class="legal-notice">
-    <h1 class="legal-notice__title">Legal Notice</h1>
+    <h1 class="legal-notice__title">{{ 'IMPRINT.TITLE' | translate }}</h1>
 
-    <h2 class="legal-notice__subtitle">Imprint</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.PROVIDER_HEADING' | translate }}</h2>
+    <p class="legal-notice__text" [innerHTML]="'IMPRINT.ADDRESS' | translate"></p>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVATE_NOTE' | translate }}</p>
+
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.CONTACT_HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        Cristian Jaraba Castilla<br>
-        Friedrichstraße 11<br>
-        10969 Berlin
+        {{ 'IMPRINT.CONTACT_EMAIL' | translate }}
+        <a class="legal-notice__link" href="mailto:cristianjaraba@hotmail.com">cristianjaraba@hotmail.com</a>
     </p>
 
-    <h2 class="legal-notice__subtitle">Exploring the Board</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.RESPONSIBLE_HEADING' | translate }}</h2>
+    <p class="legal-notice__text">{{ 'IMPRINT.RESPONSIBLE_BODY' | translate }}</p>
+
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.TERMS.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        Email: <a class="legal-notice__link" href="mailto:cristianjaraba@hotmail.com">cristianjaraba@hotmail.com</a>
+        {{ 'IMPRINT.TERMS.BODY_1' | translate }}
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.TERMS.BODY_2' | translate }}
     </p>
 
-    <h2 class="legal-notice__subtitle">Acceptance of terms</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.SCOPE.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        By accessing and using <span class="legal-notice__name">Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and
-        any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed
-        students, may update or change the terms and conditions from time to time without notice.
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.SCOPE.ORIGIN_1' | translate }}
+        <a class="legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie GmbH</a>.
+        {{ 'IMPRINT.SCOPE.ORIGIN_2' | translate }}
+    </p>
+    <p class="legal-notice__text">
+        {{ 'IMPRINT.SCOPE.DESIGN_1' | translate }}
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.SCOPE.DESIGN_2' | translate }}
+        <a class="legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie GmbH</a>.
+        {{ 'IMPRINT.SCOPE.DESIGN_3' | translate }}
     </p>
 
-    <h2 class="legal-notice__subtitle">Scope and ownership of the product</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.RIGHTS.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        <span class="legal-notice__name">Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <a class="legal-notice__name legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer
-        Akademie GmbH</a>. It has an educational purpose and is not intended for extensive personal &amp; business usage. As
-        such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality
-        regarding this Product.
-    </p>
-    <p class="legal-notice__text">
-        The design of <span class="legal-notice__name">Portfolio</span> is owned by the <a class="legal-notice__name legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie GmbH</a>. Unauthorized use, reproduction, modification,
-        distribution, or replication of the design is strictly prohibited.
+        {{ 'IMPRINT.RIGHTS.BODY_1' | translate }}
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.RIGHTS.BODY_2' | translate }}
+        <a class="legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie GmbH</a>.
     </p>
 
-    <h2 class="legal-notice__subtitle">Proprietary rights</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.USE.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        Aside from the design owned by <a class="legal-notice__name legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie GmbH</a>, we, the listed students, retain all proprietary rights
-        in <span class="legal-notice__name">Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information.
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.USE.BODY_1' | translate }}
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.USE.BODY_2' | translate }}
+        <span class="legal-notice__name">Portfolio</span>.
     </p>
 
-    <h2 class="legal-notice__subtitle">Use of the product</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.DISCLAIMER.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        <span class="legal-notice__name">Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and
-        regulations. Any use of <span class="legal-notice__name">Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another
-        person, is strictly prohibited. You are solely responsible for your interactions with other users of <span class="legal-notice__name">Portfolio</span>.
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.DISCLAIMER.BODY_1' | translate }}
+        <a class="legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie</a>
+        {{ 'IMPRINT.DISCLAIMER.BODY_2' | translate }}
+        <span class="legal-notice__name">Portfolio</span>.
     </p>
 
-    <h2 class="legal-notice__subtitle">Disclaimer of warranties and limitation of liability</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.INDEMNITY.HEADING' | translate }}</h2>
     <p class="legal-notice__text">
-        <span class="legal-notice__name">Portfolio</span> is provided "as is" without warranty of any kind, whether express or implied, including but not
-        limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In
-        no event will we, the listed students, or the <a class="legal-notice__name legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie</a>, be liable for any direct, indirect,
-        incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of
-        profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of
-        such damages, arising out of or in connection with the use or performance of <span class="legal-notice__name">Portfolio</span>.
+        {{ 'IMPRINT.INDEMNITY.BODY_1' | translate }}
+        <a class="legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie</a>
+        {{ 'IMPRINT.INDEMNITY.BODY_2' | translate }}
+        <span class="legal-notice__name">Portfolio</span>
+        {{ 'IMPRINT.INDEMNITY.BODY_3' | translate }}
     </p>
 
-    <h2 class="legal-notice__subtitle">Indemnity</h2>
+    <h2 class="legal-notice__subtitle">{{ 'IMPRINT.LINKS.HEADING' | translate }}</h2>
+    <p class="legal-notice__text">{{ 'IMPRINT.LINKS.BODY' | translate }}</p>
+
+    <h2 id="privacy" class="legal-notice__subtitle">{{ 'IMPRINT.PRIVACY.HEADING' | translate }}</h2>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.INTRO' | translate }}</p>
+
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.CONTROLLER.HEADING' | translate }}</h3>
     <p class="legal-notice__text">
-        You agree to indemnify, defend and hold harmless us, the listed students, the <a class="legal-notice__name legal-notice__link" href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer">Developer Akademie</a>, and our
-        affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss,
-        damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span class="legal-notice__name">Portfolio</span>
-        and/or your breach of this Legal Notice.
+        {{ 'IMPRINT.PRIVACY.CONTROLLER.BODY' | translate }}
+        <a class="legal-notice__link" href="mailto:cristianjaraba@hotmail.com">cristianjaraba@hotmail.com</a>
     </p>
 
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.LOGS.HEADING' | translate }}</h3>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.LOGS.BODY' | translate }}</p>
+
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.FORM.HEADING' | translate }}</h3>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.FORM.BODY' | translate }}</p>
+
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.COOKIES.HEADING' | translate }}</h3>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.COOKIES.BODY' | translate }}</p>
+
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.EXTERNAL.HEADING' | translate }}</h3>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.EXTERNAL.BODY' | translate }}</p>
+
+    <h3 class="legal-notice__subheading">{{ 'IMPRINT.PRIVACY.RIGHTS.HEADING' | translate }}</h3>
+    <p class="legal-notice__text">{{ 'IMPRINT.PRIVACY.RIGHTS.BODY' | translate }}</p>
+
     <p class="legal-notice__text">
-        For any questions or notices, please contact us at
+        {{ 'IMPRINT.QUESTIONS' | translate }}
         <a class="legal-notice__link" href="mailto:cristianjaraba@hotmail.com">cristianjaraba@hotmail.com</a>.
     </p>
 
-    <p class="legal-notice__text">Date: October 06, 2026</p>
+    <p class="legal-notice__text">{{ 'IMPRINT.DATE' | translate }}</p>
 </section>
