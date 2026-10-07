@@ -1,0 +1,14 @@
+# Single page application: every route is resolved by the Angular router in the
+# browser, so a request for a path like /imprint has no file behind it on the
+# server. Real files and directories are served as they are, everything else is
+# handed to index.html for the router to resolve.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
