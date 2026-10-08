@@ -7,15 +7,40 @@
     flex-direction: column;
     gap: 2rem;
     height: auto;
-    min-height: 100dvh;
     color: white;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    // On mobile both wrappers step aside, so the eyebrow, the photo and the
+    // text box stack as items of the section itself.
+    &__content,
+    &__boxes {
+        display: contents;
+    }
+
+    // Sits between the photo and the text box on mobile. Its block is as tall
+    // as the room the text box used to leave above itself, with the text at the
+    // bottom, 1rem off the box; the negative margin cancels the section gap
+    // below it, so the spacing stays the same as with the eyebrow floating.
+    &__eyebrow {
+        display: flex;
+        align-items: flex-end;
+        align-self: stretch;
+        height: 40px;
+        padding-bottom: 1rem;
+        margin-bottom: -2rem;
+        font-family: 'Karla';
+        color: vars.$primary-green;
+        font-size: vars.$font-size-subhead;
+    }
 
     &__container {
         border-radius: 40px;
 
         &--foto {
+            // First on mobile, ahead of the eyebrow that comes first in the
+            // markup.
+            order: -1;
             position: relative;
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -47,20 +72,9 @@
             position: relative;
             width: 100%;
             padding: 2rem;
-            margin-top: 40px;
             background-color: #3DCFB61A;
             border: 1px solid vars.$primary-green;
             color: white;
-
-            .about-me-section__eyebrow {
-                position: absolute;
-                bottom: 100%;
-                margin-bottom: 1rem;
-                left: 0;
-                font-family: 'Karla';
-                color: vars.$primary-green;
-                font-size: vars.$font-size-subhead;
-            }
 
             .about-me-section__heading {
                 font-family: 'Fira Code';
@@ -137,16 +151,32 @@
 
 @media (min-width: 1024px) {
     .about-me-section {
-        @include mix.section-desktop(row);
-        gap: 40px;
+        @include mix.section-desktop(column);
+        // Lets the content box take the full width, so the boxes keep starting
+        // at the left edge as they did when they sat in the section directly.
+        align-items: stretch;
+
+        &__content {
+            @include mix.flex-column;
+        }
+
+        // In the flow above both boxes, so the section padding ends where the
+        // eyebrow starts, as in the projects and contact sections.
+        &__eyebrow {
+            display: block;
+            height: auto;
+            padding-bottom: 0;
+            margin-bottom: 1rem;
+        }
+
+        &__boxes {
+            @include mix.flex-center;
+            gap: 40px;
+        }
 
         &__container {
             &--text {
-                // The mobile margin only makes room for the eyebrow above the
-                // box; side by side with the photo it would push the box off
-                // the vertical centre.
-                margin-top: 0;
-
+                margin-top: 50px;
                 .about-me-section__heading {
                     margin-bottom: 0.5rem;
                     text-align: left;
@@ -167,7 +197,9 @@
 
 @media (min-width: 1280px) {
     .about-me-section {
-        gap: 90px;
+        &__boxes {
+            gap: 90px;
+        }
 
         &__container {
             &--foto {

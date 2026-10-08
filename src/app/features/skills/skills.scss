@@ -24,6 +24,26 @@
     padding-top: 40px;
     padding-bottom: 100px;
 
+    // Holds the eyebrow and both boxes. The text box is the first one on every
+    // viewport, so the top of this box is also the top of the text box.
+    &__content {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+    }
+
+    // Floats above the text box on mobile, kept out of the flow so it does not
+    // add to the space between the boxes and the section edge.
+    &__eyebrow {
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 1rem;
+        left: 0;
+        font-family: 'Karla';
+        color: vars.$primary-green;
+        font-size: vars.$font-size-subhead;
+    }
+
     &__wrapper {
         @include mix.flex-column;
         align-items: center;
@@ -67,16 +87,6 @@
             padding: 2rem;
             background-color: #3DCFB61A;
             border: 1px solid vars.$primary-green;
-
-            .skills-section__eyebrow {
-                position: absolute;
-                bottom: 100%;
-                margin-bottom: 1rem;
-                left: 0;
-                font-family: 'Karla';
-                color: vars.$primary-green;
-                font-size: vars.$font-size-subhead;
-            }
 
             .skills-section__heading {
                 font-family: 'Fira Code';
@@ -210,7 +220,16 @@
 
 @media (min-width: 1024px) {
     .skills-section {
-        @include mix.section-desktop(row);
+        @include mix.section-desktop(column);
+        // Lets the content box take the full width, so the boxes keep starting
+        // at the left edge as they did when they sat in the section directly.
+        align-items: stretch;
+
+        // In the flow above both boxes, so the section padding ends where the
+        // eyebrow starts, as in the projects and contact sections.
+        &__eyebrow {
+            position: static;
+        }
 
         &__wrapper {
             flex-direction: row;

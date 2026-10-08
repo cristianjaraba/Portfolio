@@ -26,15 +26,14 @@
     padding-inline: max(calc(50% - 720px), $left-right);
 }
 
-/// Desktop layout shared by the home sections: each one fills at least the
-/// viewport and centres its content vertically, with the same padding above
-/// and below, so the space between sections follows a single rule.
+/// Desktop layout shared by the home sections: each one is as tall as its
+/// content plus the same padding above and below, so the space between
+/// sections follows a single rule.
 ///
 /// @param {String} $direction [row] Main axis of the section, `row` or `column`.
 @mixin section-desktop($direction: row) {
     display: flex;
     flex-direction: $direction;
-    min-height: 100dvh;
     padding-block: vars.$section-space-desktop;
 
     @if $direction == row {
