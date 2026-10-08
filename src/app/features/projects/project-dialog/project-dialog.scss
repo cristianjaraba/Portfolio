@@ -1,7 +1,15 @@
 @use '../../../../styles/variables' as vars;
 @use '../../../../styles/mixins' as mix;
 
+// Link of a project that has no public repository or demo yet.
+a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
 .projects-dialog {
+    overscroll-behavior: contain;
     position: fixed;
     inset: 0;
     margin: auto;

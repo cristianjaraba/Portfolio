@@ -40,7 +40,7 @@ export class ProjectService {
                 }],
                 gitHubLink: 'https://github.com/cristianjaraba',
                 LiveTestLink: '',
-                screenShot: 'assets/images/screenshots/join.jpg'
+                screenShot: 'assets/images/screenshots/under-construction.png'
             },
             {
                 projectName: 'El Pollo Loco',
@@ -56,12 +56,12 @@ export class ProjectService {
                     svg: 'assets/icons/skills-green/JavaScript.svg'
                 }],
                 gitHubLink: 'https://github.com/cristianjaraba/El-pollo-loco',
-                LiveTestLink: '',
+                LiveTestLink: 'https://cristianjarabacastilla.developerakademie.net/el_pollo_loco/index.html',
                 screenShot: 'assets/images/screenshots/el_pollo_loco.jpg'
             },
             {
-                projectName: 'DABubble',
-                descriptionKey: 'PROJECTS.ITEMS.DABUBBLE',
+                projectName: 'Pokedex',
+                descriptionKey: 'PROJECTS.ITEMS.POKEDEX',
                 technologies: [{
                     technology: 'HTML',
                     svg: 'assets/icons/skills-green/HTML.svg'
@@ -71,10 +71,13 @@ export class ProjectService {
                 }, {
                     technology: 'JavaScript',
                     svg: 'assets/icons/skills-green/JavaScript.svg'
+                }, {
+                    technology: 'REST API',
+                    svg: 'assets/icons/skills-green/REST-API.svg'
                 }],
-                gitHubLink: 'https://github.com/cristianjaraba',
-                LiveTestLink: '',
-                screenShot: 'assets/images/screenshots/dabubble.jpg'
+                gitHubLink: 'https://github.com/cristianjaraba/Pokedex',
+                LiveTestLink: 'https://cristianjarabacastilla.developerakademie.net/Pokedex/index.html',
+                screenShot: 'assets/images/screenshots/pokedex.jpg'
             }
         ];
     }

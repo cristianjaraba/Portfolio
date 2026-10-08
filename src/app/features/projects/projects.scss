@@ -100,7 +100,7 @@
             top: -20px;
         }
 
-        &--dabubble {
+        &--pokedex {
             bottom: -20px;
         }
     }
@@ -159,6 +159,8 @@
 
 @media (min-width: 1024px) {
     .projects {
+        @include mix.section-desktop(column);
+
         &__card:hover {
             .projects__screenshot-container {
                 display: flex;

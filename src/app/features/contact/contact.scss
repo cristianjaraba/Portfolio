@@ -5,6 +5,12 @@
     padding-bottom: 100px;
     @include mix.content-limit;
 
+    &__wrapper {
+        @include mix.flex-column;
+        width: 100%;
+        min-width: 0;
+    }
+
     &__eyebrow {
         font-size: vars.$font-size-subhead;
         color: vars.$primary-green;
@@ -181,7 +187,13 @@
 
 @media (min-width: 1024px) {
 .contact {
-        @include mix.flex-center;
+        @include mix.section-desktop(row);
+
+        &__wrapper {
+            flex-direction: row;
+            align-items: center;
+        }
+
         &__text-container{
             @include mix.flex-column;
             height: stretch;

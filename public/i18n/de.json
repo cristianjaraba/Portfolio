@@ -55,7 +55,7 @@
     "ITEMS": {
       "JOIN": "Aufgabenverwaltung nach dem Kanban-Prinzip. Aufgaben anlegen, per Drag and Drop zwischen Spalten verschieben und Kategorien sowie Teammitgliedern zuweisen.",
       "EL_POLLO_LOCO": "Jump-and-Run-Spiel auf Basis einer objektorientierten Architektur. Hilf Pepe, Münzen und Tabascoflaschen zu sammeln, um es mit der verrückten Henne aufzunehmen.",
-      "DABUBBLE": "Von Slack inspirierter Team-Messenger mit Echtzeit-Chat, Antwort-Threads und Kanälen, damit ein ganzes Team seine Gespräche an einem Ort behält."
+      "POKEDEX": "Pokédex auf Basis der PokéAPI. Stöbere durch Pokémon-Karten, die schrittweise nachladen, suche nach Namen und öffne jedes Pokémon, um seine Werte zu sehen und durch die anderen zu blättern."
     },
     "DIALOG": {
       "NEXT": "Nächstes Projekt",

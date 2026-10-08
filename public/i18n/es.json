@@ -55,7 +55,7 @@
     "ITEMS": {
       "JOIN": "Gestor de tareas basado en el principio Kanban. Crea tareas, muévelas entre columnas arrastrando y asígnalas a categorías y a miembros del equipo.",
       "EL_POLLO_LOCO": "Juego de plataformas con una arquitectura orientada a objetos. Ayuda a Pepe a reunir monedas y botellas de tabasco para enfrentarse a la gallina loca.",
-      "DABUBBLE": "Mensajería de equipo inspirada en Slack, con chat en tiempo real, respuestas en hilo y canales, para que todo un equipo mantenga sus conversaciones en un solo lugar."
+      "POKEDEX": "Pokédex construida sobre la PokéAPI. Explora Pokémon en tarjetas con carga progresiva, búscalos por nombre y abre cualquiera para ver sus estadísticas y navegar entre ellos."
     },
     "DIALOG": {
       "NEXT": "Siguiente proyecto",

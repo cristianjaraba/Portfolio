@@ -24,6 +24,16 @@
     padding-top: 40px;
     padding-bottom: 100px;
 
+    &__wrapper {
+        @include mix.flex-column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        // Lets the wrapper shrink below the fixed widths of its columns
+        // instead of pushing the page sideways.
+        min-width: 0;
+    }
+
     &__item {
         @include mix.flex-column;
         align-items: center;
@@ -200,10 +210,13 @@
 
 @media (min-width: 1024px) {
     .skills-section {
-        flex-direction: row;
-        gap: 40px;
-        min-height: 100dvh;
-        padding-bottom: 0px;
+        @include mix.section-desktop(row);
+
+        &__wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px;
+        }
 
         &__container {
             &--icons {
@@ -241,7 +254,9 @@
 
 @media (min-width: 1280px) {
     .skills-section {
-        gap: 90px;
+        &__wrapper {
+            gap: 90px;
+        }
 
         &__item {
 

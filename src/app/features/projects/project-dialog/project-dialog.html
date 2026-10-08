@@ -49,7 +49,7 @@
             </div>
 
             <div class="projects-dialog__links">
-                <a class="projects-dialog__links-container" href="{{projectService.currentProject()?.gitHubLink}}"
+                <a [class.disabled]="projectService.currentProject()?.projectName === 'Join'" class="projects-dialog__links-container" href="{{projectService.currentProject()?.gitHubLink}}"
                     target="_blank">
                     <span>{{ 'PROJECTS.DIALOG.GITHUB' | translate }}</span>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@
                             fill="#3DCFB6" />
                     </svg>
                 </a>
-                <a class="projects-dialog__links-container" href="{{projectService.currentProject()?.LiveTestLink}}"
+                <a [class.disabled]="projectService.currentProject()?.projectName === 'Join'" class="projects-dialog__links-container" href="{{projectService.currentProject()?.LiveTestLink}}"
                     target="_blank">
                     <span>{{ 'PROJECTS.DIALOG.LIVE_DEMO' | translate }}</span>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">

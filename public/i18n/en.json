@@ -55,7 +55,7 @@
     "ITEMS": {
       "JOIN": "Task manager built on the Kanban principle. Create tasks, move them between columns by drag and drop and assign them to categories and team members.",
       "EL_POLLO_LOCO": "Jump and run game built on an object oriented architecture. Help Pepe collect coins and tabasco bottles to take on the crazy hen.",
-      "DABUBBLE": "Slack inspired team messenger with real time chat, threaded answers and channels, so a whole team keeps its conversations in one place."
+      "POKEDEX": "Pokédex built on the PokéAPI. Browse Pokémon as cards that load in batches, search them by name and open any one to see its stats and flip through the rest."
     },
     "DIALOG": {
       "NEXT": "Next project",

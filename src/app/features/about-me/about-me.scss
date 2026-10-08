@@ -137,16 +137,15 @@
 
 @media (min-width: 1024px) {
     .about-me-section {
-        padding-bottom: 0px;
-        flex-direction: row;
-        align-items: flex-start;
+        @include mix.section-desktop(row);
         gap: 40px;
 
         &__container {
-            align-self: flex-start;
-
             &--text {
-                align-self: flex-end;
+                // The mobile margin only makes room for the eyebrow above the
+                // box; side by side with the photo it would push the box off
+                // the vertical centre.
+                margin-top: 0;
 
                 .about-me-section__heading {
                     margin-bottom: 0.5rem;
@@ -158,6 +157,9 @@
                     gap: 0.75rem;
                     margin-top: 1rem;
                 }
+            }
+            &--foto{
+                align-self: baseline;
             }
         }
     }

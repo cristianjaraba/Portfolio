@@ -1,5 +1,6 @@
 <section id="contact" class="contact">
-    <div class="contact__text-container">
+    <div class="contact__wrapper">
+      <div class="contact__text-container">
         <p class="contact__eyebrow">{{ 'CONTACT.EYEBROW' | translate }}</p>
         <h2 class="contact__heading">{{ 'CONTACT.HEADING_1' | translate }}<br>{{ 'CONTACT.HEADING_2' | translate }}</h2>
         <p class="contact__subhead">{{ 'CONTACT.SUBHEAD' | translate }}</p>
@@ -38,7 +39,7 @@
       <input class="contact__checkbox" id="privacy-policy" type="checkbox" formControlName="privacyPolicy">
       <label class="contact__privacy-text" for="privacy-policy">
         {{ 'CONTACT.PRIVACY_BEFORE' | translate }}
-        <a [routerLink]="'/imprint'" fragment="privacy" target="_blank">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>
+        <a [routerLink]="'/imprint'" fragment="privacy">{{ 'CONTACT.PRIVACY_LINK' | translate }}</a>
         {{ 'CONTACT.PRIVACY_AFTER' | translate }}
       </label>
     </div>
@@ -54,4 +55,5 @@
         </div>
     </button>
   </form>
+    </div>
 </section>
